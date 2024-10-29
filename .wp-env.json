@@ -5,8 +5,8 @@
   },
   "themes":["."],
   "mappings": {
-    "wp-content/uploads": "./wordpress/uploads",
-    "wp-content/themes": "./wordpress/themes",
-    "wp-content/plugins": "./wordpress/plugins"
+    "wp-content/uploads": "./wp-content/uploads",
+    "wp-content/themes": "./wp-content/themes",
+    "wp-content/plugins": "./wp-content/plugins"
   }
 }

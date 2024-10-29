@@ -3,7 +3,7 @@
     "stylelint-config-standard-scss",
     "stylelint-config-recess-order"
   ],
-  "ignoreFiles": ["public/**/*", "dist/**/*","wordpress/**/*"],
+  "ignoreFiles": ["public/**/*", "dist/**/*","wp-content/**/*"],
   "rules": {
   }
 }

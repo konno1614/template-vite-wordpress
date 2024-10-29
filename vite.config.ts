@@ -41,7 +41,7 @@ export default defineConfig(({ mode }) => ({
   build: {
     outDir:
       mode === "wp"
-        ? resolve(__dirname, "wordpress/themes/TEMPLATE_NAME/")
+        ? resolve(__dirname, "wp-content/themes/template-vite-wordpress/")
         : resolve(__dirname, "dist"),
     rollupOptions: {
       input: mode === "wp" ? inputsForWordPress : inputsForStatic,

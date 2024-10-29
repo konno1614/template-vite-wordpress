@@ -75,7 +75,7 @@ WordPress開発時にPHPで画像を読み込む場合はテンプレートフ�
 静的資材をビルドする場合はNPM Scriptsの`buid`コマンドを実行してください。`dist`フォルダに一式出力されます。
 
 # WordPress用ビルドについて
-WordPress用にCSSやJavaScriptをビルドする場合はNPM Scriptsの`buid for WP`コマンドを実行してください。`wordpress/themes/TEMPLATE_NAME/`内に`assets`フォルダと`images`フォルダが出力されます。`assets`フォルダにはビルドした各種CSSやJavaScriptが、`images`にはHTMLから読み込んだ静的な画像が出力されています。
+WordPress用にCSSやJavaScriptをビルドする場合はNPM Scriptsの`buid for WP`コマンドを実行してください。`wordpress/themes/template-vite-wordpress/`内に`assets`フォルダと`images`フォルダが出力されます。`assets`フォルダにはビルドした各種CSSやJavaScriptが、`images`にはHTMLから読み込んだ静的な画像が出力されています。
 
 # ビルドファイルでのWordPressの確認方法
 ヘッダー部分に下記のデバッグ用のコマンドがあります。
@@ -104,4 +104,3 @@ WordPress用にCSSやJavaScriptをビルドする場合はNPM Scriptsの`buid fo
 
 # WordPressコンテンツの同期方法
 WordPress内で作成した記事やページ、その他設定などはNPM Scriptsの`wp-contents export`コマンドでバックアップファイルを出力できます。このバックアップファイルをGitなどで管理し、`wp-contents import`でそのバックアップファイルをインポートして開発者間でのWordPressコンテンツを同期できます。あくまで単一のバックアップファイルなので差分管理などはできず、頻繁な更新には向きません。（コンフリクトしてもどちらかのファイルしか採用できません）
-

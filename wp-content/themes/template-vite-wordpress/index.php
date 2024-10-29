@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Title</title>
-  <?php 
+  <?php
     if(WP_DEBUG){
       $root = "http://localhost:5173";
       $css_ext = "scss";
@@ -14,7 +14,7 @@
       $root = get_template_directory_uri();
       $css_ext = "css";
       $js_ext = "js";
-    } 
+    }
   ?>
   <link rel="stylesheet" href="<?php echo $root;?>/assets/style/style.<?php echo $css_ext?>">
   <script src="<?php echo $root;?>/assets/js/script.<?php echo $js_ext?>" type="module"></script>
@@ -27,6 +27,8 @@
   <img src="<?php echo get_template_directory_uri();?>/images/static.png" alt="" width="300" height="300">
   <p>JSで画像</p>
   <canvas id="canvas" width="300" height="300"></canvas>
+
+  <div class="box"></div>
 </body>
 
 </html>
