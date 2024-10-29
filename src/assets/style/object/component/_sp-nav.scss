@@ -1,0 +1,8 @@
+@use "../../foundation/index" as f;
+
+.c-sp-nav {
+    display: none;
+    @include f.breakpoint(tablet) {
+        display: block;
+    }
+}

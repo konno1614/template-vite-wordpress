@@ -1,0 +1,24 @@
+@use "./font" as f;
+@use "./color" as c;
+@use "./breakpoint" as b;
+@use "./transition" as t;
+
+body {
+    @include f.gothic();
+    @include b.breakpoint(sp) {
+        // @include f.serif();
+    }
+    &.is-open {
+        height: 100%;
+        overflow: hidden;
+        touch-action: none;
+    }
+}
+
+a {
+    text-decoration: none;
+    @include t.transition(0.5s);
+    &:hover {
+        opacity: 0.8;
+    }
+}
