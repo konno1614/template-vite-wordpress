@@ -1,5 +1,5 @@
 node_modules
 dist
 .idea
-wordpress/themes/*
-wordpress/plugins/*
+wp-content/themes/*
+wp-content/plugins/*

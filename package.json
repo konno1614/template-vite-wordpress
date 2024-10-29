@@ -1,8 +1,9 @@
 {
-  "name": "wp-dev-env",
+  "name": "template-vite-wordpress",
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
+  "type": "module",
   "dependencies": {
     "@wordpress/env": "5.14.0"
   },
@@ -10,17 +11,17 @@
     "dev": "vite --host",
     "build": "rm -rf dist && vite build",
     "build for wp": "vite build --mode wp",
-    "preview": "vite preview",
     "wp-start": "wp-env start",
     "wp-stop": "wp-env stop",
+    "wp-contents export": "wp-env run cli wp db export /var/www/html/wp-content/uploads/backup.sql",
+    "wp-contents import": "wp-env run cli wp db reset --yes && wp-env run cli wp db import /var/www/html/wp-content/uploads/backup.sql",
+    "preview": "vite preview",
     "format": "yarn run _typecheck && yarn run _lint-fix && yarn run _prettier-fix",
     "_typecheck": "yarn run tsc --noEmit ",
     "_lint": "eslint --ext .ts,.js --ignore-path .gitignore . && stylelint \"**/*.{scss,css}\"",
     "_prettier": "prettier --check \"**/*.{html,scss,ts,js}\" --ignore-path .prettierignore",
     "_lint-fix": "eslint --fix --ext .ts,.js --ignore-path .gitignore . && stylelint --fix \"**/*.{scss,css}\"",
-    "_prettier-fix": "prettier --write \"**/*.{html,scss,ts,js}\" --ignore-path .prettierignore",
-    "wp-contents export": "wp-env run cli wp db export /var/www/html/wp-content/uploads/backup.sql",
-    "wp-contents import": "wp-env run cli wp db reset --yes && wp-env run cli wp db import /var/www/html/wp-content/uploads/backup.sql"
+    "_prettier-fix": "prettier --write \"**/*.{html,scss,ts,js}\" --ignore-path .prettierignore"
   },
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "6.19.1",
@@ -34,6 +35,6 @@
     "stylelint-config-recess-order": "4.4.0",
     "stylelint-config-standard-scss": "13.0.0",
     "typescript": "5.3.3",
-    "vite": "5.0.12"
+    "vite": "^5.4.10"
   }
 }
