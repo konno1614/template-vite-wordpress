@@ -2,7 +2,10 @@
 
 <div class="p-index">
     <h1>Frontpage</h1>
-    <p>This is the frontpage</p>
+    <!-- TODO: Add content here -->
+    <p>todo</p>
+    <!-- FIXME: Add content here -->
+    <p>fixme</p>
 </div>
 
 <?php get_footer(); ?>

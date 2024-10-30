@@ -25,7 +25,18 @@
 <body>
 
     <header class="l-header">
-        <p>header</p>
+        <h1>header</h1>
+        <ul>
+            <li>
+                <a href="#nav01">Nav01</a>
+            </li>
+            <li>
+                <a href="#nav02">Nav02</a>
+            </li>
+            <li>
+                <a href="#nav03">Nav03</a>
+            </li>
+        </ul>
     </header>
 
     <?php get_template_part('component/nav'); ?>
