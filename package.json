@@ -1,6 +1,7 @@
 {
     "name": "template-vite-wordpress",
     "version": "1.0.0",
+    "author": "konno1614",
     "main": "index.js",
     "license": "MIT",
     "type": "module",
