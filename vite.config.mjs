@@ -46,13 +46,13 @@ export default defineConfig(({ mode }) => ({
                 entryFileNames: "assets/js/[name].js",
                 chunkFileNames: "assets/js/[name].js",
                 assetFileNames: (assetsInfo) => {
-                if (assetsInfo.name === "style.css") {
-                    return "assets/style/[name].[ext]";
-                } else {
-                    return "assets/[name].[ext]";
+                    if (assetsInfo.name === "style.css") {
+                        return "assets/style/[name].[ext]";
+                    } else {
+                        return "assets/[name].[ext]";
+                    }
                 }
-                },
-            },
-        },
-    },
+            }
+        }
+    }
 }));

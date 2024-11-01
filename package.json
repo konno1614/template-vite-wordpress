@@ -10,8 +10,8 @@
     },
     "scripts": {
         "dev": "vite --host",
-        "build": "rm -rf dist && vite build && node ./image-format-converter.js",
-        "build for wp": "vite build --mode wp",
+        "build": "rm -rf dist && vite build",
+        "build for wp": "vite build --mode wp && node ./image-format-converter.js",
         "wp-start": "wp-env start",
         "wp-stop": "wp-env stop",
         "wp-contents export": "wp-env run cli wp db export /var/www/html/wp-content/uploads/backup.sql",
