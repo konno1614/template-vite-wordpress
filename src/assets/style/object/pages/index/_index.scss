@@ -9,6 +9,7 @@
         padding-bottom: f.clamp-space(30, 50, 320, 1440);
     }
     &__title {
+        color: f.$c-main;
         font-size: f.clamp-vw(20, 40, 320, 1440);
         line-height: calc(60 / 40);
         letter-spacing: calc(75em / 1000);
