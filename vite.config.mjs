@@ -2,11 +2,12 @@ import { defineConfig } from "vite";
 import { resolve, relative, extname } from "path";
 import { globSync } from "glob";
 import { fileURLToPath } from "node:url";
+import { viteStaticCopy } from "vite-plugin-static-copy";
 
 const root = resolve(__dirname, "src");
 
 const inputsForWordPress = {
-    style: resolve(root, "/assets/style/style.scss"),
+    style: resolve(root, "assets/style/style.scss"),
     ...Object.fromEntries(
         globSync("src/assets/js/*.ts").map((file) => [
             relative(
@@ -19,7 +20,7 @@ const inputsForWordPress = {
 };
 
 const inputsForStatic = {
-    style: resolve(root, "/assets/style/style.scss"),
+    style: resolve(root, "assets/style/style.scss"),
     ...Object.fromEntries(
         globSync("src/**/*.html").map((file) => [
             relative("src", file.slice(0, file.length - extname(file).length)),
@@ -55,4 +56,11 @@ export default defineConfig(({ mode }) => ({
             },
         },
     },
+    plugins: [
+        viteStaticCopy({
+            targets: [
+                { src: resolve(__dirname, 'src/assets/images'), dest: 'assets' }
+            ]
+        })
+    ]
 }));

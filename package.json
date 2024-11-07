@@ -10,7 +10,7 @@
     },
     "scripts": {
         "dev": "vite --host",
-        "build": "rm -rf dist && vite build && node ./image-format-converter.js",
+        "build": "rm -rf dist && vite build",
         "build for wp": "vite build --mode wp",
         "wp-start": "wp-env start",
         "wp-stop": "wp-env stop",
@@ -41,6 +41,7 @@
         "stylelint-config-recess-order": "4.4.0",
         "stylelint-config-standard-scss": "13.0.0",
         "typescript": "5.3.3",
-        "vite": "^5.4.10"
+        "vite": "^5.4.10",
+        "vite-plugin-static-copy": "^2.0.0"
     }
 }

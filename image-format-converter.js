@@ -7,12 +7,12 @@ import sharp from 'sharp'
 class ImageFormatConverter {
     #defaults = {
         srcDir: 'src',
-        distDir: 'dist',
+        distDir: 'wp-content/themes/template-vite-wordpress',
         src: ['/**/*.{jpg,jpeg,png}'],
         includeExtensionName: true,
         formats: [
             { type: 'webp', quality: 80 },
-            { type: 'avif', quality: 50 }
+            // { type: 'avif', quality: 50 }
         ]
     }
 

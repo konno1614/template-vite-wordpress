@@ -1,12 +1,6 @@
 @use "../../../foundation/index" as f;
 
 .p-index {
-    h1 {
-        color: red;
-        font-size: 4rem;
-        font-weight: 700;
-    }
-
     overflow-x: hidden;
     padding-top: f.clamp-space(50, 100, 320, 1440);
     padding-bottom: f.clamp-space(50, 100, 320, 1440);
@@ -21,44 +15,23 @@
         margin-block-start: calc(10px + var(--leading-trim));
     }
     &__text {
-        background-color: f.$c-accent;
         margin-top: f.clamp-space(30, 50, 320, 1440);
-        margin-bottom: f.clamp-space(30, 50, 320, 1440);
-        padding-top: f.clamp-space(10, 20, 320, 1440);
-        padding-bottom: f.clamp-space(10, 20, 320, 1440);
         @include f.breakpoint(sp) {
             margin-top: f.clamp-space(30, 30, 320, 1440);
-            margin-bottom: f.clamp-space(30, 30, 320, 1440);
-            padding-top: f.clamp-space(10, 10, 320, 1440);
-            padding-bottom: f.clamp-space(10, 10, 320, 1440);
         }
     }
-    &__jpg {
+    &__image {
         margin-top: f.clamp-space(30, 50, 320, 1440);
         @include f.breakpoint(sp) {
             margin-top: f.clamp-space(30, 30, 320, 1440);
-        }
-        h3 {
-            color: f.$c-blue;
-            margin-bottom: f.clamp-space(15, 20, 320, 1440);
-            @include f.breakpoint(sp) {
-                color: f.$c-red;
-            }
-        }
-        img {
         }
     }
-    &__png {
-        margin-top: f.clamp-space(30, 50, 320, 1440);
-        @include f.breakpoint(sp) {
-            margin-top: f.clamp-space(30, 30, 320, 1440);
-        }
-        h3 {
-            color: f.$c-red;
-            margin-bottom: f.clamp-space(15, 20, 320, 1440);
-            @include f.breakpoint(sp) {
-                color: f.$c-blue;
-            }
-        }
+    &__bg {
+        width: 512px;
+        height: 512px;
+        background-image: url(/assets/images/background.png);
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: contain;
     }
 }
