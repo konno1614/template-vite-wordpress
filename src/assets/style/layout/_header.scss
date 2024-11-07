@@ -10,7 +10,8 @@
         padding: f.clamp-space(10, 20, 320, 1440);
     }
     h1 {
-        color: f.$c-accent;
+        color: red;
+        padding-left: 1em;
     }
     ul {
         display: flex;

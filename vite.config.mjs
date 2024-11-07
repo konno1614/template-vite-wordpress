@@ -30,10 +30,16 @@ const inputsForStatic = {
 };
 
 // 画像ファイルをコピーする関数
-const copyImages = () => {
+const copyImages = (destDir) => {
     const srcDir = resolve(__dirname, "src/assets/images");
-    const destDir = resolve(__dirname, "dist/assets/images");
     fs.copySync(srcDir, destDir);
+};
+
+// CSSファイルをコピーする関数
+const copyCSS = () => {
+    const srcFile = resolve(__dirname, "dist/assets/style/style.css");
+    const destFile = resolve(__dirname, "wp-content/themes/template-vite-wordpress/assets/style/style.css");
+    fs.copySync(srcFile, destFile);
 };
 
 export default defineConfig(({ mode }) => {
@@ -56,7 +62,7 @@ export default defineConfig(({ mode }) => {
                     chunkFileNames: "assets/js/[name].js",
                     assetFileNames: (assetsInfo) => {
                         if (/\.(gif|jpeg|jpg|png|svg|webp)$/.test(assetsInfo.name)) {
-                            return 'assets/_ignored-all-images/[name].[ext]';
+                            return 'assets/images/[name].[ext]';
                         } else if (assetsInfo.name === "style.css") {
                             return "assets/style/[name].[ext]";
                         } else {
@@ -65,16 +71,41 @@ export default defineConfig(({ mode }) => {
                     }
                 }
             }
-        }
+        },
+        plugins: [
+            {
+                name: 'watch-and-copy-css',
+                configureServer(server) {
+                    const cssFile = resolve(__dirname, "dist/assets/style/style.css");
+                    chokidar.watch(cssFile).on('change', () => {
+                        copyCSS();
+                    });
+                },
+                buildEnd() {
+                    copyCSS();
+                }
+            }
+        ]
     };
 
     // ビルド後に画像ファイルをコピー
-    if (mode !== "wp") {
+    if (mode === "wp") {
         config.build.rollupOptions.plugins = [
             {
                 name: 'copy-images',
                 writeBundle() {
-                    copyImages();
+                    const destDir = resolve(__dirname, "wp-content/themes/template-vite-wordpress/assets/images");
+                    copyImages(destDir);
+                }
+            }
+        ];
+    } else {
+        config.build.rollupOptions.plugins = [
+            {
+                name: 'copy-images',
+                writeBundle() {
+                    const destDir = resolve(__dirname, "dist/assets/images");
+                    copyImages(destDir);
                 }
             }
         ];
