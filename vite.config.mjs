@@ -6,34 +6,47 @@ import fs from "fs-extra";
 
 const root = resolve(__dirname, "src");
 
+const getInputs = (pattern, baseDir) => {
+    return Object.fromEntries(
+        globSync(pattern).map((file) => [
+            relative(baseDir, file.slice(0, file.length - extname(file).length)),
+            fileURLToPath(new URL(file, import.meta.url))
+        ])
+    );
+};
+
 const inputsForWordPress = {
     style: resolve(root, "assets/style/style.scss"),
-    ...Object.fromEntries(
-        globSync("src/assets/js/*.ts").map((file) => [
-            relative(
-                "src/assets/js",
-                file.slice(0, file.length - extname(file).length),
-            ),
-            fileURLToPath(new URL(file, import.meta.url))
-        ]),
-    ),
+    ...getInputs("src/assets/js/*.ts", "src/assets/js")
 };
 
 const inputsForStatic = {
     style: resolve(root, "assets/style/style.scss"),
-    ...Object.fromEntries(
-        globSync("src/**/*.html").map((file) => [
-            relative("src", file.slice(0, file.length - extname(file).length)),
-            fileURLToPath(new URL(file, import.meta.url)),
-        ]),
-    ),
+    ...getInputs("src/**/*.html", "src")
 };
 
-// 画像ファイルをコピーする関数
 const copyImages = (destDir) => {
     const srcDir = resolve(__dirname, "src/assets/images");
     fs.copySync(srcDir, destDir);
 };
+
+const getRollupOptions = (mode) => ({
+    input: mode === "wp" ? inputsForWordPress : inputsForStatic,
+    output: {
+        entryFileNames: "assets/js/[name].js",
+        chunkFileNames: "assets/js/[name].js",
+        assetFileNames: (assetsInfo) => {
+            if (/\.(gif|jpeg|jpg|png|svg|webp)$/.test(assetsInfo.name)) {
+                return 'assets/images/[name].[ext]';
+            } else if (assetsInfo.name === "style.css") {
+                return "assets/style/[name].[ext]";
+            } else {
+                return "assets/[name].[ext]";
+            }
+        }
+    },
+    plugins: []
+});
 
 export default defineConfig(({ mode }) => {
     const config = {
@@ -41,52 +54,28 @@ export default defineConfig(({ mode }) => {
         base: "./",
         server: {
             port: 5173,
-            origin: mode == "wp" ? undefined : "http://localhost:5173",
+            origin: mode === "wp" ? undefined : "http://localhost:5173",
         },
         build: {
-            outDir:
-            mode === "wp"
+            outDir: mode === "wp"
                 ? resolve(__dirname, "wp-content/themes/template-vite-wordpress/")
                 : resolve(__dirname, "dist"),
-            rollupOptions: {
-                input: mode === "wp" ? inputsForWordPress : inputsForStatic,
-                output: {
-                    entryFileNames: "assets/js/[name].js",
-                    chunkFileNames: "assets/js/[name].js",
-                    assetFileNames: (assetsInfo) => {
-                        if (/\.(gif|jpeg|jpg|png|svg|webp)$/.test(assetsInfo.name)) {
-                            return 'assets/_ignore-images/[name].[ext]';
-                        } else if (assetsInfo.name === "style.css") {
-                            return "assets/style/[name].[ext]";
-                        } else {
-                            return "assets/[name].[ext]";
-                        }
-                    }
-                },
-                plugins: [] // 追加
-            }
+            rollupOptions: getRollupOptions(mode)
         },
         plugins: []
     };
 
-    // ビルド後に画像ファイルをコピー
-    if (mode === "wp") {
-        config.build.rollupOptions.plugins.push({
-            name: 'copy-images',
-            writeBundle() {
-                const destDir = resolve(__dirname, "wp-content/themes/template-vite-wordpress/assets/images");
-                copyImages(destDir);
-            }
-        });
-    } else {
-        config.build.rollupOptions.plugins.push({
-            name: 'copy-images',
-            writeBundle() {
-                const destDir = resolve(__dirname, "dist/assets/images");
-                copyImages(destDir);
-            }
-        });
-    }
+    const imageCopyPlugin = {
+        name: 'copy-images',
+        writeBundle() {
+            const destDir = mode === "wp"
+                ? resolve(__dirname, "wp-content/themes/template-vite-wordpress/assets/images")
+                : resolve(__dirname, "dist/assets/images");
+            copyImages(destDir);
+        }
+    };
+
+    config.build.rollupOptions.plugins.push(imageCopyPlugin);
 
     return config;
 });
