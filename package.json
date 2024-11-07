@@ -11,7 +11,7 @@
     "scripts": {
         "dev": "vite --host",
         "build": "rm -rf dist && vite build",
-        "build for wp": "vite build --mode wp",
+        "build for wp": "rimraf wp-content/themes/template-vite-wordpress/assets wp-content/themes/template-vite-wordpress/css wp-content/themes/template-vite-wordpress/js && vite build --mode wp",
         "wp-start": "wp-env start",
         "wp-stop": "wp-env stop",
         "wp-contents export": "wp-env run cli wp db export /var/www/html/wp-content/uploads/backup.sql",
@@ -35,6 +35,7 @@
         "glob": "10.3.10",
         "globule": "^1.3.4",
         "prettier": "3.2.4",
+        "rimraf": "^6.0.1",
         "sass": "1.70.0",
         "sharp": "^0.33.5",
         "stylelint": "16.2.0",
