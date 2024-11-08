@@ -58,7 +58,7 @@ export default defineConfig(({ mode }) => {
         },
         build: {
             outDir: mode === "wp"
-                ? resolve(__dirname, "wp-content/themes/template-vite-wordpress/")
+                ? resolve(__dirname, "cms/wp-content/themes/template-vite-wordpress/")
                 : resolve(__dirname, "dist"),
             rollupOptions: getRollupOptions(mode)
         },
@@ -69,7 +69,7 @@ export default defineConfig(({ mode }) => {
         name: 'copy-images',
         writeBundle() {
             const destDir = mode === "wp"
-                ? resolve(__dirname, "wp-content/themes/template-vite-wordpress/assets/images")
+                ? resolve(__dirname, "cms/wp-content/themes/template-vite-wordpress/assets/images")
                 : resolve(__dirname, "dist/assets/images");
             copyImages(destDir);
         }

@@ -5,7 +5,7 @@
 ## issue-draft
 - [ ] .wp-env.jsonにAdvanced Custom Fields PROを追加したい。
 - [ ] dist/assets/images/に全ての画像が生成されてしまう。
-- [ ] /assets以下の変更のwp-contentでもホットリロードしたい。
+- [ ] /assets以下の変更のcms/wp-contentでもホットリロードしたい。
 - [ ]
 
 ## issue-closed
