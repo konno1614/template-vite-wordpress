@@ -6,4 +6,26 @@
     @include f.breakpoint(sp) {
         background-color: #f4f4f4;
     }
+    &__contents {
+
+    }
+    &__list {
+
+        li {
+            &+li {
+                margin-top: 1em;
+            }
+        }
+    }
+    &__not-yet {
+        margin-top: 1em;
+        text-align: center;
+    }
+    &__back {
+        margin-top: 1em;
+        text-align: center;
+    }
+    &__nav {
+        margin-top: 1em;
+    }
 }

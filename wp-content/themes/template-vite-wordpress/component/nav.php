@@ -1,13 +1,18 @@
-<nav class="c-nav">
-    <ul>
+<nav class="c-nav js-nav">
+    <div class="c-nav__logo">
+        <a href="<?php echo esc_url(home_url('/')); ?>">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/logo.png" width="511" height="164" alt="Logo" />
+        </a>
+    </div>
+    <ul class="c-nav__list">
         <li>
-            <a href="#nav01">Nav01</a>
+            <a href="<?php echo esc_url(home_url('/')); ?>news/">News</a>
         </li>
         <li>
-            <a href="#nav02">Nav02</a>
+            <a href="<?php echo esc_url(home_url('/')); ?>sample/">Sample</a>
         </li>
         <li>
-            <a href="#nav03">Nav03</a>
+            <a href="<?php echo esc_url(home_url('/')); ?>privacy/">Privacy</a>
         </li>
     </ul>
 </nav>

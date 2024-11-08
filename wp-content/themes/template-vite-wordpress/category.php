@@ -24,10 +24,11 @@
                         </li>
                     <?php endwhile; ?>
                 </ul>
-            <?php else: ?>
-                <p class="p-news__not-yet">まだ投稿はありません。</p>
             <?php endif; ?>
             <?php get_template_part('component/pager'); ?>
+        </div>
+        <div class="p-news__back">
+            <a href="<?php echo esc_url(home_url('/')); ?>news/">News一覧へ</a>
         </div>
     </div>
 </main>

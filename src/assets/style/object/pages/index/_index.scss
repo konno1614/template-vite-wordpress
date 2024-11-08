@@ -28,11 +28,16 @@
         }
     }
     &__bg {
+        margin-top: 1em;
         width: 512px;
         height: 512px;
         background-image: url(/assets/images/background.png);
         background-repeat: no-repeat;
         background-position: center center;
         background-size: contain;
+        @include f.breakpoint(sp) {
+            width: 200px;
+            height: 200px;
+        }
     }
 }

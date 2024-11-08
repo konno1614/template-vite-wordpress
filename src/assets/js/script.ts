@@ -1,4 +1,5 @@
 import { common } from "./common/common";
 
 common();
-console.log("console aaa");
+
+console.log("console script");

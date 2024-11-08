@@ -1,74 +1,63 @@
 @use "../../foundation/index" as f;
 
 .c-hamburger {
-    display: none;
-    @include f.breakpoint(tablet) {
-        position: fixed;
-        bottom: 20px;
-        right: 20px;
-        z-index: 99;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 999;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: f.$c-accent;
+    &:hover {
+        cursor: pointer;
+    }
+    &__border {
+        position: relative;
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        width: 60px;
-        height: 60px;
-        border-radius: 50%;
-        background: linear-gradient(#ea5201 0%, #de0504 64.53%, #c70505 100%);
-        &:hover {
-            cursor: pointer;
-        }
-        &__border {
-            position: relative;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            width: 20px;
-            height: 10px;
-            span {
-                position: absolute;
-                display: inline-block;
-                width: 100%;
-                height: 1px;
-                background-color: f.$c-white;
-                border-radius: 8px;
-                @include f.transition(0.3s);
-                &:nth-of-type(1) {
-                    top: 0;
-                }
-                &:nth-of-type(2) {
-                    top: 50%;
-                    transform: translateY(-50%);
-                }
-                &:nth-of-type(3) {
-                    bottom: 0;
-                }
+        width: 20px;
+        height: 15px;
+        span {
+            position: absolute;
+            display: inline-block;
+            width: 100%;
+            height: 2px;
+            background-color: f.$c-white;
+            border-radius: 8px;
+            @include f.transition(0.3s);
+            &:nth-of-type(1) {
+                top: 0;
+            }
+            &:nth-of-type(2) {
+                top: 50%;
+                transform: translateY(-50%);
+            }
+            &:nth-of-type(3) {
+                bottom: 0;
             }
         }
-        &__menu {
-            color: f.$c-white;
-            font-weight: 500;
-            font-size: f.clamp-vw(11, 11, 320, 1440);
-            line-height: calc(22 / 22);
-            letter-spacing: calc(50em / 1000);
-            margin-top: f.clamp-vw(10, 10, 320, 1440);
-        }
-        &.is-open {
-            .c-hamburger__border {
-                span {
-                    &:nth-of-type(1) {
-                        top: 50%;
-                        transform: translateY(-50%) rotate(-45deg);
-                    }
-                    &:nth-of-type(2) {
-                        opacity: 0;
-                    }
-                    &:nth-of-type(3) {
-                        bottom: unset;
-                        top: 50%;
-                        transform: translateY(-50%) rotate(45deg);
-                    }
+    }
+    &.is-open {
+        .c-hamburger__border {
+            span {
+                &:nth-of-type(1) {
+                    top: 50%;
+                    transform: translateY(-50%) rotate(-45deg);
+                }
+                &:nth-of-type(2) {
+                    opacity: 0;
+                }
+                &:nth-of-type(3) {
+                    bottom: unset;
+                    top: 50%;
+                    transform: translateY(-50%) rotate(45deg);
                 }
             }
         }

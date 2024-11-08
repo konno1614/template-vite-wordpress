@@ -2,37 +2,11 @@
 @use "./color" as c;
 
 // font-family
-@mixin gothic {
+@mixin noto-sans-jp() {
     font-family: "Noto Sans JP", sans-serif;
     font-style: normal;
     font-optical-sizing: auto;
     font-weight: 400;
-}
-@mixin serif {
-    font-family: "Noto Serif JP", serif;
-    font-style: normal;
-    font-optical-sizing: auto;
-    font-weight: 400;
-}
-
-// font-weight
-@mixin font_thin($weight: 100) {
-    font-weight: $weight;
-}
-@mixin font_light($weight: 300) {
-    font-weight: $weight;
-}
-@mixin font_regular($weight: 400) {
-    font-weight: $weight;
-}
-@mixin font_medium($weight: 500) {
-    font-weight: $weight;
-}
-@mixin font_bold($weight: 700) {
-    font-weight: $weight;
-}
-@mixin font_black($weight: 900) {
-    font-weight: $weight;
 }
 
 // font-size clamp
@@ -59,7 +33,7 @@
 
 // font-settings
 body {
-    @include gothic;
+    @include noto-sans-jp();
     font-size: 16px;
     font-weight: 400;
     font-style: normal;

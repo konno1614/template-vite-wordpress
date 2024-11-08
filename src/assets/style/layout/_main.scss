@@ -2,4 +2,6 @@
 
 .l-main {
     background-color: f.$c-sub;
+    padding-top: f.clamp-space(50, 100, 320, 1440);
+    padding-bottom: f.clamp-space(50, 100, 320, 1440);
 }

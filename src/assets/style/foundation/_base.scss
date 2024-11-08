@@ -4,9 +4,11 @@
 @use "./transition" as t;
 
 body {
-    @include f.gothic();
+    background-color: c.$c-white;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
     @include b.breakpoint(sp) {
-        // @include f.serif();
     }
     &.is-open {
         height: 100%;
@@ -16,6 +18,7 @@ body {
 }
 
 a {
+    color: c.$c-text;
     text-decoration: none;
     @include t.transition(0.5s);
     &:hover {
