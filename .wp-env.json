@@ -4,11 +4,11 @@
     "config": {
         "WP_DEBUG": false
     },
-    "themes":["./cms/wp-content/themes/template-vite-wordpress"],
+    "themes":["./wp-content/themes/template-vite-wordpress"],
     "mappings": {
-        "cms/wp-content/uploads": "./cms/wp-content/uploads",
-        "cms/wp-content/themes": "./cms/wp-content/themes",
-        "cms/wp-content/plugins": "./cms/wp-content/plugins"
+        "wp-content/uploads": "./wp-content/uploads",
+        "wp-content/themes": "./wp-content/themes",
+        "wp-content/plugins": "./wp-content/plugins"
     },
     "plugins": [
         "https://downloads.wordpress.org/plugin/wp-multibyte-patch.latest-stable.zip",
