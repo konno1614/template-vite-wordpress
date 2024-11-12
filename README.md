@@ -1,6 +1,16 @@
 # template-vite-wordpress
 利用OSはMacを想定しています。
 
+
+## WordPress情報
+| 項目 | URL |
+| - | - |
+| サイトURL | http://localhost:8888/ |
+| 管理画面URL | http://localhost:8888/wp-admin/ |
+| ユーザー | admin |
+| パスワード | password |
+
+
 ## フロント開発
 ![VS Code](https://img.shields.io/badge/Visual%20Studio%20Code-007ACC?style=flat&logo=visualstudiocode&logoColor=ffffff)
 ![Git](https://img.shields.io/badge/Git-F05032?style=flat&logo=Git&logoColor=ffffff)
@@ -146,8 +156,3 @@ or
 npm install --legacy-peer-deps
 ```
 ▲更新された`package.json`に合わせた新しいバージョンがインストールされる
-
-
-## GitHub Pages
-
-[publicディレクトリ](https://konno1614.github.io/template-vite/public/)
