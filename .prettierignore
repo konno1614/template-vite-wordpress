@@ -1,5 +1,5 @@
 node_modules
 dist
 .idea
-cms/wp-content/themes/*
-cms/wp-content/plugins/*
+root/cms/wp-content/themes/*
+root/cms/wp-content/plugins/*

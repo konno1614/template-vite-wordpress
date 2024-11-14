@@ -17,6 +17,8 @@
     }
     &__text {
         margin-top: f.clamp-space(30, 50, 320, 1440);
+        color: f.$c-white;
+        background-color: f.$c-accent;
         @include f.breakpoint(sp) {
             margin-top: f.clamp-space(30, 30, 320, 1440);
         }

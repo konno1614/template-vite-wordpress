@@ -101,7 +101,7 @@
     │   └── json
     │       └── manifest.webmanifest
     │
-    └── cms/wp-content
+    └── root/cms/wp-content
         ├── plugins
         ├── themes
         │   └── konnotes
@@ -155,7 +155,7 @@ npm run dev
 npm run build
 ```
 
-### cms/wp-contentへのビルド
+### root/cms/wp-contentへのビルド
 ```
 npm run build-wp
 ```
