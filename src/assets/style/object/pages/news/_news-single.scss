@@ -1,0 +1,8 @@
+@use "../../../foundation/index" as f;
+
+.c-news-single {
+    background-color: #ededed;
+    @include f.breakpoint(sp) {
+        background-color: #f4f4f4;
+    }
+}

@@ -1,0 +1,29 @@
+@use "../../foundation/index" as f;
+
+.pc-only {
+    display: inline-block;
+    @include f.breakpoint(tablet) {
+        display: none;
+    }
+    @include f.breakpoint(sp) {
+        display: none;
+    }
+}
+.tablet-only {
+    display: none;
+    @include f.breakpoint(tablet) {
+        display: inline-block;
+    }
+    @include f.breakpoint(sp) {
+        display: none;
+    }
+}
+.sp-only {
+    display: none;
+    @include f.breakpoint(tablet) {
+        display: none;
+    }
+    @include f.breakpoint(sp) {
+        display: inline-block;
+    }
+}

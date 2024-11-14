@@ -1,0 +1,32 @@
+@use "../foundation/index" as f;
+
+.l-header {
+    padding: f.clamp-space(20, 40, 320, 1440);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    @include f.breakpoint(sp) {
+        padding: f.clamp-space(10, 20, 320, 1440);
+    }
+    h1 {
+        img {
+            max-width: 200px;
+            @include f.breakpoint(sp) {
+                max-width: 100px;
+            }
+        }
+    }
+    ul {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        li {
+            & + li {
+                margin-left: f.clamp-space(10, 20, 320, 1440);
+                @include f.breakpoint(sp) {
+                    padding: f.clamp-space(5, 10, 320, 1440);
+                }
+            }
+        }
+    }
+}

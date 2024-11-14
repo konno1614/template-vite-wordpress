@@ -1,0 +1,46 @@
+@use "../../foundation/index" as f;
+
+.c-nav {
+    opacity: 0;
+    visibility: hidden;
+    position: fixed;
+    z-index: 99;
+    overflow-y: scroll;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background-color: f.$c-sub;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    @include f.transition(0.3s);
+    @include f.breakpoint(sp) {
+    }
+    &.is-open {
+        opacity: 1;
+        visibility: visible;
+        left: 0;
+    }
+    &__logo {
+        img {
+            max-width: 200px;
+            @include f.breakpoint(sp) {
+                max-width: 100px;
+            }
+        }
+    }
+    &__list {
+        margin-top: 1em;
+        li {
+            text-align: center;
+            a {
+                text-decoration: underline;
+            }
+            & + li {
+                margin-top: 1em;
+            }
+        }
+    }
+}

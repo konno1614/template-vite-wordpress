@@ -1,0 +1,20 @@
+{
+    "core": "https://wordpress.org/wordpress-6.7.zip",
+    "phpVersion": "8.3",
+    "config": {
+        "WP_DEBUG": false
+    },
+    "themes":["./cms/wp-content/themes/template-vite-wordpress"],
+    "mappings": {
+        "wp-content/uploads": "./cms/wp-content/uploads",
+        "wp-content/themes": "./cms/wp-content/themes",
+        "wp-content/plugins": "./cms/wp-content/plugins"
+    },
+    "plugins": [
+        "https://downloads.wordpress.org/plugin/wp-multibyte-patch.latest-stable.zip",
+        "https://downloads.wordpress.org/plugin/taxonomy-terms-order.latest-stable.zip",
+        "https://downloads.wordpress.org/plugin/intuitive-custom-post-order.latest-stable.zip",
+        "https://downloads.wordpress.org/plugin/post-types-order.latest-stable.zip",
+        "https://downloads.wordpress.org/plugin/duplicate-post.latest-stable.zip"
+    ]
+}

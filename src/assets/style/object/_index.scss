@@ -1,0 +1,11 @@
+@use "./component/hamburger";
+@use "./component/nav";
+@use "./component/sp-nav";
+@use "./component/title";
+@use "./component/button";
+
+@use "./pages/index/index" as indexPage;
+@use "./pages/about/index" as aboutPage;
+@use "./pages/news/index" as newsPage;
+
+@use "./utility/display";

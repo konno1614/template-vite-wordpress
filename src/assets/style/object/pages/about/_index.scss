@@ -1,0 +1,7 @@
+@use "../../../foundation/index" as f;
+
+.p-about {
+    p {
+        color: f.$c-main;
+    }
+}
