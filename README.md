@@ -1,14 +1,5 @@
-# template-vite-wordpress
+# Template-Vite-WoredPress
 利用OSはMacを想定しています。
-
-
-## WordPress情報
-| 項目 | URL |
-| - | - |
-| サイトURL | http://localhost:8888/ |
-| 管理画面URL | http://localhost:8888/wp-admin/ |
-| ユーザー | admin |
-| パスワード | password |
 
 
 ## フロント開発
@@ -18,11 +9,57 @@
 ![vite](https://img.shields.io/badge/vite-F7C526?style=flat&logo=vite&logoColor=8971EA)
 ![node.js](https://img.shields.io/badge/Node.js-5FA04E?style=flat&logo=node.js&logoColor=ffffff)
 ![npm](https://img.shields.io/badge/npm-CB3837?style=flat&logo=npm&logoColor=ffffff)
+![docker](https://img.shields.io/badge/docker-4682b4?style=flat&logo=docker&logoColor=ffffff)
+
+
+## 開発フロー
+- ファイルを更新した際、SFTPを使ってファイルをアップロード
+- 管理画面から更新・操作などした際、`npm run wp-export`して`/wp-content/uploads/backup.sql`にバックアップファイルを生成
+- backup.sqlをphpMyAdmin画面からインポート
+- phpMyAdmin画面の`wp_options`から、`siteurl`と`home`を適切なものに更新
+
+
+## 利用ツール
+- [wp-env](https://ja.wordpress.org/team/handbook/block-editor/reference-guides/packages/packages-env/)
+- [Docker Desktop](https://www.docker.com/ja-jp/products/docker-desktop/)
+
+
+## ローカルWordPress情報
+| 項目 | URL |
+| - | - |
+| 静的サイトURL | http://localhost:5173/ |
+| 動的サイトURL | http://localhost:8888/ |
+| 管理画面URL | http://localhost:8888/wp-admin/ |
+| ユーザー | admin |
+| パスワード | password |
+
+
+## サーバー構成
+```txt
+└── Project
+    ├── dev
+    │   └── cms
+    │       ├── wp-admin
+    │       ├── wp-content
+    │       └── wp-include
+    └── public
+        └── cms
+            ├── wp-admin
+            ├── wp-content
+            └── wp-include
+```
+
+
+## phpMyAdmin
+| 項目 | URL |
+| - | - |
+| siteurl | https://example.com/cms |
+| home | https://example.com |
 
 
 ### ファイル構成
 ```txt
-└── Project/
+└── Project
     ├── src
     │   ├── assets
     │   │   ├── images
@@ -64,10 +101,10 @@
     │   └── json
     │       └── manifest.webmanifest
     │
-    └── wp-content
+    └── cms/wp-content
         ├── plugins
         ├── themes
-        │   └── template-vite-wordpress
+        │   └── konnotes
         │       ├── index.php  // Other files used by wordpress.
         │       ├── assets
         │       │   ├── images
@@ -87,49 +124,53 @@
 ```
 
 ### 推奨 node バーション
-
 ```
 node.js(version: v22.9.0)
 ```
 
 ### 依存ファイルインストール
-
 ```
 npm install
 ```
 
-### 開発開始
+### docker起動
+```
+npm run wp-start
+```
 
+
+### docker停止
+```
+npm run wp-stop
+```
+
+
+### 開発開始
 ```
 npm run dev
 ```
 
 ### /distへのビルド
-
 ```
 npm run build
 ```
 
-### /wp-contentへのビルド
-
+### cms/wp-contentへのビルド
 ```
 npm run build-wp
 ```
 
 ### SQLファイルのエクスポート
-
 ```
 npm run wp-export
 ```
 
 ### SQLファイルのインポート
-
 ```
 npm run wp-import
 ```
 
-### npmパッケージアップデート
-
+## npmパッケージアップデート
 ```
 npm i -g npm-check-updates
 ```

@@ -4,9 +4,7 @@
 
 ## issue-draft
 - [ ] .wp-env.jsonにAdvanced Custom Fields PROを追加したい。
-- [ ] dist/assets/images/に全ての画像が生成されてしまう。
-- [ ] /assets以下の変更のwp-contentでもホットリロードしたい。
-- [ ]
+- [ ] wordpress起動時に、言語を日本語デフォルトにしたい。
 
 ## issue-closed
 - [x] jpg,png画像をwebp画像に変換したい。
