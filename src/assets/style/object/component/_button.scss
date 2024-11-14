@@ -1,6 +1,0 @@
-@use "../../foundation/index" as f;
-
-.c-button {
-    @include f.breakpoint(sp) {
-    }
-}
