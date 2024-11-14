@@ -13,6 +13,7 @@
 ## 開発フロー
 - 開発開始：.wp-env.jsonのWP_DEBUGを`true`にして、`npm run wp-start`でdokcer起動、その後`npm run dev`
 - 開発終了：.wp-env.jsonのWP_DEBUGを`false`にして、`npm run build-wp`でWP用にビルド、再度`npm run wp-start`でブラウザ上でパスや表示の確認後、`npm run wp-stop`でdockerを停止
+※静的ファイルを生成する必要がある場合は、`npm run build`で/distに生成
 
 ### 納品方法
 - ファイルを更新した際、`SFTP`を使ってファイルをアップロード
