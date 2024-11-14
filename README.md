@@ -1,7 +1,6 @@
 # Template-Vite-WoredPress
 利用OSはMacを想定しています。
 
-
 ## フロント開発
 ![VS Code](https://img.shields.io/badge/Visual%20Studio%20Code-007ACC?style=flat&logo=visualstudiocode&logoColor=ffffff)
 ![Git](https://img.shields.io/badge/Git-F05032?style=flat&logo=Git&logoColor=ffffff)
@@ -12,14 +11,15 @@
 ![docker](https://img.shields.io/badge/docker-4682b4?style=flat&logo=docker&logoColor=ffffff)
 
 ## 開発フロー
-- 開発開始時は.wp-env.jsonの`WP_DEBUGをtrue`にして`npm run wp-start`後に`npm run dev`
-- 開発終了時は.wp-env.jsonの`WP_DEBUGをfalse`にして再度`npm run wp-start`後に表示確認し、`npm run build-wp`
+- 開発開始：.wp-env.jsonのWP_DEBUGを`true`にして、`npm run wp-start`でdokcer起動、その後`npm run dev`
+- 開発終了：.wp-env.jsonのWP_DEBUGを`false`にして、`npm run build-wp`でWP用にビルド、再度`npm run wp-start`でブラウザ上でパスや表示の確認後、`npm run wp-stop`でdockerを停止
 
 ### 納品方法
 - ファイルを更新した際、`SFTP`を使ってファイルをアップロード
 - 管理画面から更新・操作などした際、`npm run wp-export`して`/wp-content/uploads/backup.sql`にバックアップファイルを生成
-- backup.sqlをphpMyAdmin画面からインポート
+- backup.sqlをphpMyAdmin画面から生成したバックアップファイルをインポート
 - phpMyAdmin画面の`wp_options`から、`siteurl`と`home`を適切なものに更新
+- `.htaccess`,`index.php`,`sitemap.xml`,`robots.txt`の内容を適切なものに更新
 
 ## 利用ツール
 - [wp-env](https://ja.wordpress.org/team/handbook/block-editor/reference-guides/packages/packages-env/)
@@ -36,7 +36,7 @@
 
 ## サーバー構成
 ```txt
-└── Project
+└── Root
     ├── dev
     │   └── cms
     │       ├── wp-admin
