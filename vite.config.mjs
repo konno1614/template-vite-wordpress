@@ -56,6 +56,13 @@ export default defineConfig(({ mode }) => {
             port: 5173,
             origin: mode === "wp" ? undefined : "http://localhost:5173",
         },
+        css: {
+            preprocessorOptions: {
+                scss: {
+                    api: "modern-compiler",
+                },
+            },
+        },
         build: {
             outDir: mode === "wp"
                 ? resolve(__dirname, "root/cms/wp-content/themes/template-vite-wordpress/")

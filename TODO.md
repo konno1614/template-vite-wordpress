@@ -7,4 +7,4 @@
 - [ ] wordpress起動時に、言語を日本語デフォルトにしたい。
 
 ## issue-closed
-- [x] jpg,png画像をwebp画像に変換したい。
+- [x]

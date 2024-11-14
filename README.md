@@ -11,18 +11,19 @@
 ![npm](https://img.shields.io/badge/npm-CB3837?style=flat&logo=npm&logoColor=ffffff)
 ![docker](https://img.shields.io/badge/docker-4682b4?style=flat&logo=docker&logoColor=ffffff)
 
-
 ## 開発フロー
-- ファイルを更新した際、SFTPを使ってファイルをアップロード
+- 開発開始時は.wp-env.jsonの`WP_DEBUGをtrue`にして`npm run wp-start`後に`npm run dev`
+- 開発終了時は.wp-env.jsonの`WP_DEBUGをfalse`にして再度`npm run wp-start`後に表示確認し、`npm run build-wp`
+
+### 納品方法
+- ファイルを更新した際、`SFTP`を使ってファイルをアップロード
 - 管理画面から更新・操作などした際、`npm run wp-export`して`/wp-content/uploads/backup.sql`にバックアップファイルを生成
 - backup.sqlをphpMyAdmin画面からインポート
 - phpMyAdmin画面の`wp_options`から、`siteurl`と`home`を適切なものに更新
 
-
 ## 利用ツール
 - [wp-env](https://ja.wordpress.org/team/handbook/block-editor/reference-guides/packages/packages-env/)
 - [Docker Desktop](https://www.docker.com/ja-jp/products/docker-desktop/)
-
 
 ## ローカルWordPress情報
 | 項目 | URL |
@@ -32,7 +33,6 @@
 | 管理画面URL | http://localhost:8888/wp-admin/ |
 | ユーザー | admin |
 | パスワード | password |
-
 
 ## サーバー構成
 ```txt
@@ -49,13 +49,11 @@
             └── wp-include
 ```
 
-
 ## phpMyAdmin
 | 項目 | URL |
 | - | - |
 | siteurl | https://example.com/cms |
 | home | https://example.com |
-
 
 ### ファイル構成
 ```txt
@@ -138,12 +136,10 @@ npm install
 npm run wp-start
 ```
 
-
 ### docker停止
 ```
 npm run wp-stop
 ```
-
 
 ### 開発開始
 ```
