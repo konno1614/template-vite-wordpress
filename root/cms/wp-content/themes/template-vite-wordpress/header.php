@@ -5,10 +5,10 @@
 <head>
     <?php
     if (WP_DEBUG) {
-        $root = "http://localhost:5173";
+        $root = "http://localhost:1024";
         $css_ext = "scss";
         $js_ext = "ts";
-        echo '<script type="module" src="http://localhost:5173/@vite/client"></script>';
+        echo '<script type="module" src="http://localhost:1024/@vite/client"></script>';
     } else {
         $root = get_template_directory_uri();
         $css_ext = "css";

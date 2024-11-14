@@ -29,7 +29,7 @@
 ## ローカルWordPress情報
 | 項目 | URL |
 | - | - |
-| 静的サイトURL | http://localhost:5173/ |
+| 静的サイトURL | http://localhost:1024/ |
 | 動的サイトURL | http://localhost:8888/ |
 | 管理画面URL | http://localhost:8888/wp-admin/ |
 | ユーザー | admin |

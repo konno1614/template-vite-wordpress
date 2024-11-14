@@ -53,8 +53,8 @@ export default defineConfig(({ mode }) => {
         root,
         base: "./",
         server: {
-            port: 5173,
-            origin: mode === "wp" ? undefined : "http://localhost:5173",
+            port: 1024,
+            origin: mode === "wp" ? undefined : "http://localhost:1024",
         },
         css: {
             preprocessorOptions: {
