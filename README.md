@@ -15,6 +15,10 @@
 - 開発終了：.wp-env.jsonのWP_DEBUGを`false`にして、`npm run build-wp`でWP用にビルド、再度`npm run wp-start`でブラウザ上でパスや表示の確認後、`npm run wp-stop`でdockerを停止
 ※静的ファイルを生成する必要がある場合は、`npm run build`で/distに生成
 
+### 共同開発フロー
+- メイン作業者：適宜`npm run wp-export`してバックアップファイルを生成
+- サブ作業者：`npm run wp-import`してバックアップファイルをインポート
+
 ### 納品方法
 - ファイルを更新した際、`SFTP`を使ってファイルをアップロード
 - 管理画面から更新・操作などした際、`npm run wp-export`して`/wp-content/uploads/backup.sql`にバックアップファイルを生成
