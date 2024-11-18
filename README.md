@@ -13,7 +13,8 @@
 ## 開発フロー
 - 開発開始：`npm run wp-start` → `docker-compose up` → `npm run dev`
 - 開発終了：`npm run build-wp` → `docker-compose down`→ `npm run wp-stop`
-※データベースやメールのチェックをしない場合は`docker-compose`コマンドは省略可能
+- ※データベースやメールのチェックをしない場合は`docker-compose`コマンドは省略可能
+- ※作業者の環境により`compose.yaml`の30行目の`name`は変更になるので、`node_modules/.bin/wp-env install-path`でコンテナのハッシュ値を取得して適宜更新
 
 ### 共同開発フロー
 - メイン作業者：適宜`npm run wp-export`してバックアップファイルを生成
