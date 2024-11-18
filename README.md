@@ -11,9 +11,9 @@
 ![docker](https://img.shields.io/badge/docker-4682b4?style=flat&logo=docker&logoColor=ffffff)
 
 ## 開発フロー
-- 開発開始：`docker-compose up` → `npm run wp-start` → `npm run dev`
-- 開発終了：`docker-compose down` → `npm run build-wp` → `npm run wp-stop`
-
+- 開発開始：`npm run wp-start` → `docker-compose up` → `npm run dev`
+- 開発終了：`npm run build-wp` → `docker-compose down`→ `npm run wp-stop`
+※データベースやメールのチェックをしない場合は`docker-compose`コマンドは省略可能
 
 ### 共同開発フロー
 - メイン作業者：適宜`npm run wp-export`してバックアップファイルを生成
