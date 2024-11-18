@@ -16,8 +16,8 @@ get_template_part('functions/adminmenu'); // 管理画面
 get_template_part('functions/editor'); // エディター
 get_template_part('functions/seo'); // seo
 // get_template_part('functions/filesize'); // ファイルサイズ併記
-// get_template_part('functions/contactform'); // お問い合わせ
-// get_template_part('functions/cf7'); // cf7
+get_template_part('functions/contactform'); // お問い合わせ
+get_template_part('functions/cf7'); // cf7
 // get_template_part('functions/manualpdf'); // manualpdf
 get_template_part('functions/archive'); // アーカイブページ有効化
 

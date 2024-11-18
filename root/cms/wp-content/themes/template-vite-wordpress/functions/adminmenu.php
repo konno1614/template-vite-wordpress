@@ -47,7 +47,7 @@ add_action('admin_menu', 'remove_menus');
 function my_remove_post_support()
 {
     // remove_post_type_support('page','title');           // タイトル
-    remove_post_type_support('page', 'editor');          // 本文
+    // remove_post_type_support('page', 'editor');          // 本文
     remove_post_type_support('page', 'author');            // 作成者
     remove_post_type_support('page', 'thumbnail');         // アイキャッチ画像
     remove_post_type_support('page', 'excerpt');           // 抜粋

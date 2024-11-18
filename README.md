@@ -11,9 +11,9 @@
 ![docker](https://img.shields.io/badge/docker-4682b4?style=flat&logo=docker&logoColor=ffffff)
 
 ## 開発フロー
-- 開発開始：.wp-env.jsonのWP_DEBUGを`true`にして、`npm run wp-start`でdokcer起動、その後`npm run dev`
-- 開発終了：.wp-env.jsonのWP_DEBUGを`false`にして、`npm run build-wp`でWP用にビルド、再度`npm run wp-start`でブラウザ上でパスや表示の確認後、`npm run wp-stop`でdockerを停止
-※静的ファイルを生成する必要がある場合は、`npm run build`で/distに生成
+- 開発開始：`docker-compose up` → `npm run wp-start` → `npm run dev`
+- 開発終了：`docker-compose down` → `npm run build-wp` → `npm run wp-stop`
+
 
 ### 共同開発フロー
 - メイン作業者：適宜`npm run wp-export`してバックアップファイルを生成
@@ -30,7 +30,7 @@
 - [wp-env](https://ja.wordpress.org/team/handbook/block-editor/reference-guides/packages/packages-env/)
 - [Docker Desktop](https://www.docker.com/ja-jp/products/docker-desktop/)
 
-## ローカルWordPress情報
+## WordPress
 | 項目 | URL |
 | - | - |
 | 静的サイトURL | http://localhost:1024/ |
@@ -38,6 +38,22 @@
 | 管理画面URL | http://localhost:8888/wp-admin/ |
 | ユーザー | admin |
 | パスワード | password |
+
+## Adminer
+| 項目 | URL |
+| - | - |
+| URL | http://localhost:8080/ |
+| サーバ | mysql |
+| ユーザ名 | root |
+| パスワード | password |
+| データベース | wordpress |
+
+## MailHog
+| 項目 | URL |
+| - | - |
+| URL | http://localhost:8025/ |
+| 送信テスト用メールアドレス | wordpress@example.com |
+
 
 ## サーバー構成
 ```txt
@@ -198,3 +214,8 @@ or
 npm install --legacy-peer-deps
 ```
 ▲更新された`package.json`に合わせた新しいバージョンがインストールされる
+
+## 参考URL
+- [@wordpress/env](https://ja.wordpress.org/team/handbook/block-editor/reference-guides/packages/packages-env/)
+- [wp-envとViteで作る爆速WordPress開発環境](https://zenn.dev/crayfisher_zari/articles/f2d38f536eaf02)
+- [wp-envにAdminerとMailHogを組み合わせる開発環境](https://www.braveryk7.com/wp-env-with-adminer-mailhog/)
