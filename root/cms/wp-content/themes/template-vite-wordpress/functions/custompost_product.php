@@ -119,10 +119,10 @@ add_filter('admin_post_thumbnail_html', 'add_featured_image_instruction');
 function add_featured_image_instruction($content)
 {
     $screen = get_current_screen();
-    if ($screen->post_type == 'post') { //投稿
-        $content .= '<p>横900px x 縦600px</p>';
+    if ($screen->post_type == '_post') { //投稿
+        $content .= '<p>推奨サイズ：横900px x 縦600px</p>';
     } elseif ($screen->post_type == 'product') { //カスタム投稿
-        $content .= '<p>横900px x 縦900px</p>';
+        $content .= '<p>推奨サイズ：横900px x 縦900px</p>';
     }
     return $content;
 }
