@@ -27,4 +27,4 @@ services:
 networks:
   wpnetwork:
     external:
-      name: 594dbea68c14e0c063ecdee740494eff_default
+      name: fff8ae17fe738c84fec16d7b42bea194_default
