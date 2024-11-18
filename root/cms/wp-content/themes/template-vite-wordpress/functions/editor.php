@@ -127,11 +127,11 @@ function my_remove_meta_boxes()
     remove_meta_box('trackbacksdiv', 'post', 'normal');    // トラックバック
     // remove_meta_box('slugdiv','post','normal');        // スラッグ
     remove_meta_box('postcustom', 'post', 'normal');       // カスタムフィールド
-    remove_meta_box('postimagediv', 'post', 'normal');    // アイキャッチ
+    // remove_meta_box('postimagediv', 'post', 'normal');    // アイキャッチ
     remove_meta_box('commentsdiv', 'post', 'normal');      // コメント
     // remove_meta_box('submitdiv','post','normal' );     // 公開
     // remove_meta_box('categorydiv','post','normal');    // カテゴリー
-    remove_meta_box('tagsdiv-post_tag', 'post', 'normal'); // タグ
+    // remove_meta_box('tagsdiv-post_tag', 'post', 'normal'); // タグ
     remove_meta_box('commentstatusdiv', 'post', 'normal'); // ディスカッション
     remove_meta_box('authordiv', 'post', 'normal');        // 作成者
     remove_meta_box('revisionsdiv', 'post', 'normal');     // リビジョン

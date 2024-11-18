@@ -17,8 +17,9 @@ add_filter('wp_calculate_image_srcset_meta', '__return_null');
 /*-----------------------------------------------------------------------------------*/
 /* 投稿とページの画像パス設定
 /*-----------------------------------------------------------------------------------*/
-function replaceImagePath($arg) {
-  $content = str_replace('"img/', '"' . get_bloginfo('template_directory') . '/img/', $arg);
-  return $content;
+function replaceImagePath($arg)
+{
+    $content = str_replace('"img/', '"' . get_bloginfo('template_directory') . '/img/', $arg);
+    return $content;
 }
 add_action('the_content', 'replaceImagePath');

@@ -1,19 +1,21 @@
 <?php
 // contactform7をcontact以外削除
-function exclude_contact_form7_scripts() {
-  if ( ! is_page( 'contact' ) ) {// 除外したいページのスラッグを指定します
-    wp_dequeue_script( 'contact-form-7' ); // Contact Form 7のJavaScriptを除外
-    wp_dequeue_style( 'contact-form-7' ); // Contact Form 7のCSSを除外
-  }
+function exclude_contact_form7_scripts()
+{
+    if (! is_page('contact')) { // 除外したいページのスラッグを指定します
+        wp_dequeue_script('contact-form-7'); // Contact Form 7のJavaScriptを除外
+        wp_dequeue_style('contact-form-7'); // Contact Form 7のCSSを除外
+    }
 }
-add_action( 'wp_enqueue_scripts', 'exclude_contact_form7_scripts', 100 );
+add_action('wp_enqueue_scripts', 'exclude_contact_form7_scripts', 100);
 
 
 
 // Contact Form 7で自動挿入されるPタグ、brタグを削除
 add_filter('wpcf7_autop_or_not', 'wpcf7_autop_return_false');
-function wpcf7_autop_return_false() {
-  return false;
+function wpcf7_autop_return_false()
+{
+    return false;
 }
 
 

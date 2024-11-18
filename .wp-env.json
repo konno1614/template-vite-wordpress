@@ -1,8 +1,14 @@
 {
-    "core": "https://wordpress.org/wordpress-6.7.zip",
+    "core": "https://ja.wordpress.org/latest-ja.zip",
     "phpVersion": "8.3",
     "config": {
-        "WP_DEBUG": true
+        "WP_DEBUG": true,
+        "WP_DEBUG_LOG": true,
+        "WP_DEBUG_DISPLAY": true,
+        "WPMS_ON": true,
+        "WPMS_SMTP_HOST": "mailhog",
+        "WPMS_SMTP_PORT": 1025,
+        "WPMS_MAILER": "smtp"
     },
     "themes":["./root/cms/wp-content/themes/template-vite-wordpress"],
     "mappings": {
@@ -15,6 +21,8 @@
         "https://downloads.wordpress.org/plugin/taxonomy-terms-order.latest-stable.zip",
         "https://downloads.wordpress.org/plugin/intuitive-custom-post-order.latest-stable.zip",
         "https://downloads.wordpress.org/plugin/post-types-order.latest-stable.zip",
-        "https://downloads.wordpress.org/plugin/duplicate-post.latest-stable.zip"
+        "https://downloads.wordpress.org/plugin/duplicate-post.latest-stable.zip",
+        "https://downloads.wordpress.org/plugin/contact-form-7.latest-stable.zip",
+        "https://downloads.wordpress.org/plugin/wp-mail-smtp.latest-stable.zip"
     ]
 }

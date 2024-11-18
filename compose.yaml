@@ -1,0 +1,30 @@
+volumes:
+  maildir: {}
+
+services:
+  adminer:
+    image: adminer
+    restart: always
+    ports:
+      - 8080:8080
+    networks:
+      - wpnetwork
+
+  mail:
+    image: mailhog/mailhog
+    container_name: mailhog
+    ports:
+      - 1025:1025
+      - 8025:8025
+    environment:
+      MH_STORAGE: maildir
+      MH_MAILDIR_PATH: /tmp
+    volumes:
+      - maildir:/tmp
+    networks:
+      - wpnetwork
+
+networks:
+  wpnetwork:
+    external:
+      name: fff8ae17fe738c84fec16d7b42bea194_default

@@ -1,0 +1,21 @@
+@use "../../../foundation/index" as f;
+
+.p-contact {
+    &__section {
+        &+& {
+            margin-top: 50px;
+        }
+    }
+    &__title {
+        color: f.$c-main;
+    }
+    &__form {
+        form {
+            display:flex;
+            flex-direction: column;
+        }
+    }
+    &__google-form {
+
+    }
+}
