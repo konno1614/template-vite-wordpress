@@ -11,14 +11,18 @@
 ![docker](https://img.shields.io/badge/docker-4682b4?style=flat&logo=docker&logoColor=ffffff)
 
 ## 開発フロー
-- 開発開始：`npm run wp-start` → `docker-compose up` → `npm run dev`
-- 開発終了：`npm run build-wp` → `docker-compose down`→ `npm run wp-stop`
-- ※データベースやメールのチェックをしない場合は`docker-compose`コマンドは省略可能
-- ※作業者の環境により`compose.yaml`の30行目の`name`は変更になるので、`node_modules/.bin/wp-env install-path`でコンテナのハッシュ値を取得して適宜更新
+- 開発開始：`npm run start`
+- 開発終了：`npm run build`
+
+※作業者の環境により`compose.yaml`の30行目の`name`は変更になるので、<br />
+`npm run wp-start`でwp-envでwordpressを立ち上げ、`npm run check-hash-value`でdockerコンテナの`ハッシュ値を取得`する<br />
+30行目を<br />
+name: `取得したハッシュ値`_default<br />
+と変更し、開発を開始する
 
 ### 共同開発フロー
-- メイン作業者：適宜`npm run wp-export`してバックアップファイルを生成
-- サブ作業者：`npm run wp-import`してバックアップファイルをインポート
+- メイン作業者：`npm run start`>`npm run wp-export`してバックアップファイルをエクスポート
+- サブ作業者：`npm run wp-start`>`npm run check-hash-value`>`compose.yamlの30行目のハッシュ値を更新`>`npm run start`>`npm run wp-import`してバックアップファイルをインポート
 
 ### 納品方法
 - ファイルを更新した際、`SFTP`を使ってファイルをアップロード
