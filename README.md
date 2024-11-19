@@ -225,14 +225,9 @@ npm run wp-stop
 npm run dev
 ```
 
-### /distへのビルド
+### 開発終了
 ```
 npm run build
-```
-
-### root/cms/wp-contentへのビルド
-```
-npm run build-wp
 ```
 
 ### SQLファイルのエクスポート
