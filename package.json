@@ -11,7 +11,7 @@
     "scripts": {
         "dev": "vite --host",
         "build": "rm -rf dist && vite build",
-        "build-wp": "rimraf root/cms/wp-content/themes/template-vite-wordpress/assets root/cms/wp-content/themes/template-vite-wordpress/css root/cms/wp-content/themes/template-vite-wordpress/js root/cms/wp-content/themes/template-vite-wordpress/font && vite build --mode wp && node ./image-format-converter.js",
+        "build-wp": "rimraf root/cms/wp-content/themes/template-vite-wordpress/assets root/cms/wp-content/themes/template-vite-wordpress/css root/cms/wp-content/themes/template-vite-wordpress/js root/cms/wp-content/themes/template-vite-wordpress/font root/cms/wp-content/themes/template-vite-wordpress/img && vite build --mode wp && node ./image-format-converter.js",
         "wp-start": "wp-env start",
         "wp-stop": "wp-env stop",
         "wp-export": "wp-env run cli wp db export /var/www/html/wp-content/uploads/backup.sql",
