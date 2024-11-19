@@ -11,7 +11,7 @@ get_template_part('functions/pregetpost'); // メインクエリ
 get_template_part('functions/pankuzu'); // パンくず
 // get_template_part('functions/mobile'); // pcとモバイル
 // get_template_part('functions/optionpage'); // optionpage
-get_template_part('functions/custompost_product'); // カスタム投稿「商品一覧」
+get_template_part('functions/custompost'); // カスタム投稿
 get_template_part('functions/adminmenu'); // 管理画面
 get_template_part('functions/editor'); // エディター
 get_template_part('functions/seo'); // seo

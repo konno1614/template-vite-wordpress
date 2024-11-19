@@ -68,6 +68,9 @@
                 <a href="<?php echo esc_url(home_url('/')); ?>product/">Product</a>
             </li>
             <li>
+                <a href="<?php echo esc_url(home_url('/')); ?>web/">Web</a>
+            </li>
+            <li>
                 <a href="<?php echo esc_url(home_url('/')); ?>privacy/">Privacy</a>
             </li>
             <li>
