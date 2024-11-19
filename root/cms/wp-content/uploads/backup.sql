@@ -391,7 +391,7 @@ INSERT INTO `wp_options` VALUES
 (119,'widget_tag_cloud','a:1:{s:12:\"_multiwidget\";i:1;}','auto'),
 (120,'widget_nav_menu','a:1:{s:12:\"_multiwidget\";i:1;}','auto'),
 (121,'widget_custom_html','a:1:{s:12:\"_multiwidget\";i:1;}','auto'),
-(124,'_transient_doing_cron','1732002412.7331480979919433593750','on'),
+(124,'_transient_doing_cron','1732002660.0129759311676025390625','on'),
 (149,'theme_mods_twentytwentyfour','a:1:{s:16:\"sidebars_widgets\";a:2:{s:4:\"time\";i:1730263165;s:4:\"data\";a:3:{s:19:\"wp_inactive_widgets\";a:0:{}s:9:\"sidebar-1\";a:3:{i:0;s:7:\"block-2\";i:1;s:7:\"block-3\";i:2;s:7:\"block-4\";}s:9:\"sidebar-2\";a:2:{i:0;s:7:\"block-5\";i:1;s:7:\"block-6\";}}}}','off'),
 (150,'current_theme','template-vite-wordpress','auto'),
 (151,'theme_mods_template-vite-wordpress','a:2:{i:0;b:0;s:18:\"nav_menu_locations\";a:0:{}}','on'),
@@ -960,4 +960,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2024-11-19  7:48:31
+-- Dump completed on 2024-11-19  7:51:54

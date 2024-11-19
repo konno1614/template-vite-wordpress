@@ -21,9 +21,7 @@
         background-color: f.$c-shadow;
         padding: .5em;
         font-size: 30px;
-        display: flex;
-        align-items: flex-start;
-        justify-content: flex-end;
+        display: inline-flex;
         @include f.breakpoint(sp) {
             margin-top: f.clamp-space(30, 30, 320, 1440);
         }
