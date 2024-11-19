@@ -27,8 +27,7 @@
         "image-format-converter": "node ./image-format-converter.js",
         "preview-static": "vite preview",
         "delete-assets": "rimraf root/cms/wp-content/themes/template-vite-wordpress/assets",
-        "delete-public": "rimraf root/cms/wp-content/themes/template-vite-wordpress/css root/cms/wp-content/themes/template-vite-wordpress/js root/cms/wp-content/themes/template-vite-wordpress/font root/cms/wp-content/themes/template-vite-wordpress/img root/cms/wp-content/themes/template-vite-wordpress/json",
-        "copy-public": "cp -r root/cms/wp-content/themes/template-vite-wordpress/css root/cms/wp-content/themes/template-vite-wordpress/js root/cms/wp-content/themes/template-vite-wordpress/font root/cms/wp-content/themes/template-vite-wordpress/img root/cms/wp-content/themes/template-vite-wordpress/json"
+        "delete-public": "rimraf root/cms/wp-content/themes/template-vite-wordpress/css root/cms/wp-content/themes/template-vite-wordpress/js root/cms/wp-content/themes/template-vite-wordpress/font root/cms/wp-content/themes/template-vite-wordpress/img root/cms/wp-content/themes/template-vite-wordpress/json"
     },
     "devDependencies": {
         "ansi-colors": "^4.1.3",

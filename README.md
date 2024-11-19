@@ -275,4 +275,5 @@ npm install --legacy-peer-deps
 ##　開発環境作成の参考URL
 - [@wordpress/env](https://ja.wordpress.org/team/handbook/block-editor/reference-guides/packages/packages-env/)
 - [wp-envとViteで作る爆速WordPress開発環境](https://zenn.dev/crayfisher_zari/articles/f2d38f536eaf02)
+- [【Node.js】sharp でサクッと「AVIF」「WebP」生成](https://qiita.com/taqumo/items/60de0af9699415150035)
 - [wp-envにAdminerとMailHogを組み合わせる開発環境](https://www.braveryk7.com/wp-env-with-adminer-mailhog/)
