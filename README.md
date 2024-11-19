@@ -25,14 +25,16 @@
 - 管理画面から更新・操作などした際、`npm run wp-export`して`/wp-content/uploads/backup.sql`にバックアップファイルを生成
 - backup.sqlをphpMyAdmin画面から生成したバックアップファイルをインポート
 - phpMyAdmin画面の`wp_options`から、`siteurl`と`home`を適切なものに更新
-- `.htaccess`,`index.php`,`sitemap.xml`,`robots.txt`の内容を適切なものに更新
+- `root/.htaccess`,`root/index.php`,`root/sitemap.xml`,`root/robots.txt`,`root/cms/wp-config.php`の内容を適切なものに更新
 
 ## 利用ツール
 - [wp-env](https://ja.wordpress.org/team/handbook/block-editor/reference-guides/packages/packages-env/)
 - [Docker Desktop](https://www.docker.com/ja-jp/products/docker-desktop/)
 
-## WordPress
-| 項目 | URL |
+## 開発環境
+
+### WordPress
+| 項目 | 値 |
 | - | - |
 | 静的サイトURL | http://localhost:1024/ |
 | 動的サイトURL | http://localhost:8888/ |
@@ -40,8 +42,8 @@
 | ユーザー | admin |
 | パスワード | password |
 
-## Adminer
-| 項目 | URL |
+### Adminer
+| 項目 | 値 |
 | - | - |
 | URL | http://localhost:8080/ |
 | サーバ | mysql |
@@ -49,16 +51,21 @@
 | パスワード | password |
 | データベース | wordpress |
 
-## MailHog
-| 項目 | URL |
+### MailHog
+| 項目 | 値 |
 | - | - |
 | URL | http://localhost:8025/ |
 | 送信テスト用メールアドレス | wordpress@example.com |
 
+## テスト・本番環境
 
-## サーバー構成
+### サーバー構成
+テスト環境と本番環境は同じサーバーに同居させる<br />
+テスト環境のディレクトリを`/dev`<br />
+本番環境のディレクトリを`/public`<br />
+とし、それぞれにデータベースを作成する
 ```txt
-└── Root
+└── root
     ├── dev
     │   └── cms
     │       ├── wp-admin
@@ -71,15 +78,65 @@
             └── wp-include
 ```
 
-## phpMyAdmin
-| 項目 | URL |
-| - | - |
-| siteurl | https://example.com/cms |
-| home | https://example.com |
+### テスト環境
+ルートディレクトリを`/dev`に設定<br />
+（さくらのコントロールパネル>ドメイン/SSL>ドメイン/SSL>設定>基本設定>Web公開フォルダを`/dev`に設定）
 
-### ファイル構成
+#### WordPress
+| 項目 | 値 |
+| - | - |
+| URL | https://example.com/ |
+| 管理画面URL | https://example.com/cms/wp-admin/ |
+| ユーザー | { FIXME! } |
+| パスワード | { FIXME! } |
+
+#### データベース
+| 項目 | 値 |
+| - | - |
+| DBサーバー | { FIXME! } |
+| DB名 | { FIXME! } |
+| DBユーザー名 | { FIXME! } |
+| DBパスワード | { FIXME! } |
+
+#### phpMyAdmin
+| 項目 | 値 |
+| - | - |
+| ユーザ名 | { FIXME! } |
+| パスワード | { FIXME! } |
+| wp_options>siteurl | https://example.com/cms |
+| wp_options>home | https://example.com |
+
+### 本番環境
+ルートディレクトリを`/public`に設定<br />
+（さくらのコントロールパネル>ドメイン/SSL>ドメイン/SSL>設定>基本設定>Web公開フォルダを`/public`に設定）
+
+#### WordPress
+| 項目 | 値 |
+| - | - |
+| URL | https://example.com/ |
+| 管理画面URL | https://example.com/cms/wp-admin/ |
+| ユーザー | { FIXME! } |
+| パスワード | { FIXME! } |
+
+#### データベース
+| 項目 | 値 |
+| - | - |
+| DBサーバー | { FIXME! } |
+| DB名 | { FIXME! } |
+| DBユーザー名 | { FIXME! } |
+| DBパスワード | { FIXME! } |
+
+#### phpMyAdmin
+| 項目 | 値 |
+| - | - |
+| ユーザ名 | { FIXME! } |
+| パスワード | { FIXME! } |
+| wp_options>siteurl | https://example.com/cms |
+| wp_options>home | https://example.com |
+
+### 開発環境ファイル構成
 ```txt
-└── Project
+└── project
     ├── src
     │   ├── assets
     │   │   ├── images
@@ -216,7 +273,7 @@ npm install --legacy-peer-deps
 ```
 ▲更新された`package.json`に合わせた新しいバージョンがインストールされる
 
-## 参考URL
+##　開発環境作成の参考URL
 - [@wordpress/env](https://ja.wordpress.org/team/handbook/block-editor/reference-guides/packages/packages-env/)
 - [wp-envとViteで作る爆速WordPress開発環境](https://zenn.dev/crayfisher_zari/articles/f2d38f536eaf02)
 - [wp-envにAdminerとMailHogを組み合わせる開発環境](https://www.braveryk7.com/wp-env-with-adminer-mailhog/)
