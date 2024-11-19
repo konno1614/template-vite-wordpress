@@ -17,12 +17,12 @@
 ※作業者の環境により`compose.yaml`の30行目の`name`は変更になるので、<br />
 `npm run wp-start`でwp-envでwordpressを立ち上げ、`npm run check-hash-value`でdockerコンテナの`ハッシュ値を取得`する<br />
 30行目を<br />
-name: `取得したハッシュ値`_default<br />
+name: `取得したハッシュ値`_default
 と変更し、開発を開始する
 
 ### 共同開発フロー
-- メイン作業者：`npm run start`>`npm run wp-export`してバックアップファイルをエクスポート
-- サブ作業者：`npm run wp-start`>`npm run check-hash-value`>`compose.yamlの30行目のハッシュ値を更新`>`npm run start`>`npm run wp-import`してバックアップファイルをインポート
+- メイン作業者：`npm run build`>で都度バックアップファイルをエクスポート
+- サブ作業者：`npm run wp-start`>`npm run check-hash-value`>`compose.yamlの30行目のハッシュ値を更新`>`npm run start`で都度バックアップファイルをインポート
 
 ### 納品方法
 - ファイルを更新した際、`SFTP`を使ってファイルをアップロード
