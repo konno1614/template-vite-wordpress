@@ -3,6 +3,7 @@ import { resolve, relative, extname } from "path";
 import { globSync } from "glob";
 import { fileURLToPath } from "node:url";
 import fs from "fs-extra";
+import autoprefixer from 'autoprefixer';
 
 const root = resolve(__dirname, "src");
 
@@ -61,6 +62,12 @@ export default defineConfig(({ mode }) => {
                 scss: {
                     api: "modern-compiler",
                 },
+            },
+            devSourcemap: true,
+            postcss: {
+                plugins: [
+                    autoprefixer()
+                ]
             },
         },
         build: {

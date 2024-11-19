@@ -260,7 +260,7 @@ CREATE TABLE `wp_options` (
   PRIMARY KEY (`option_id`),
   UNIQUE KEY `option_name` (`option_name`),
   KEY `autoload` (`autoload`)
-) ENGINE=InnoDB AUTO_INCREMENT=479 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=481 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -391,7 +391,7 @@ INSERT INTO `wp_options` VALUES
 (119,'widget_tag_cloud','a:1:{s:12:\"_multiwidget\";i:1;}','auto'),
 (120,'widget_nav_menu','a:1:{s:12:\"_multiwidget\";i:1;}','auto'),
 (121,'widget_custom_html','a:1:{s:12:\"_multiwidget\";i:1;}','auto'),
-(124,'_transient_doing_cron','1732001324.3603630065917968750000','on'),
+(124,'_transient_doing_cron','1732002412.7331480979919433593750','on'),
 (149,'theme_mods_twentytwentyfour','a:1:{s:16:\"sidebars_widgets\";a:2:{s:4:\"time\";i:1730263165;s:4:\"data\";a:3:{s:19:\"wp_inactive_widgets\";a:0:{}s:9:\"sidebar-1\";a:3:{i:0;s:7:\"block-2\";i:1;s:7:\"block-3\";i:2;s:7:\"block-4\";}s:9:\"sidebar-2\";a:2:{i:0;s:7:\"block-5\";i:1;s:7:\"block-6\";}}}}','off'),
 (150,'current_theme','template-vite-wordpress','auto'),
 (151,'theme_mods_template-vite-wordpress','a:2:{i:0;b:0;s:18:\"nav_menu_locations\";a:0:{}}','on'),
@@ -506,8 +506,8 @@ INSERT INTO `wp_options` VALUES
 (474,'_site_transient_update_themes','O:8:\"stdClass\":5:{s:12:\"last_checked\";i:1731996577;s:7:\"checked\";a:1:{s:23:\"template-vite-wordpress\";s:0:\"\";}s:8:\"response\";a:0:{}s:9:\"no_update\";a:0:{}s:12:\"translations\";a:0:{}}','off'),
 (475,'_site_transient_timeout_browser_7e027a3addee67cddbfc6e68d5517502','1732601377','off'),
 (476,'_site_transient_browser_7e027a3addee67cddbfc6e68d5517502','a:10:{s:4:\"name\";s:6:\"Safari\";s:7:\"version\";s:4:\"18.1\";s:8:\"platform\";s:9:\"Macintosh\";s:10:\"update_url\";s:29:\"https://www.apple.com/safari/\";s:7:\"img_src\";s:43:\"http://s.w.org/images/browsers/safari.png?1\";s:11:\"img_src_ssl\";s:44:\"https://s.w.org/images/browsers/safari.png?1\";s:15:\"current_version\";s:2:\"11\";s:7:\"upgrade\";b:0;s:8:\"insecure\";b:0;s:6:\"mobile\";b:0;}','off'),
-(477,'_site_transient_timeout_wp_theme_files_patterns-7e3ec3f407185f9a6344a35c52f42cb8','1732002145','off'),
-(478,'_site_transient_wp_theme_files_patterns-7e3ec3f407185f9a6344a35c52f42cb8','a:2:{s:7:\"version\";s:0:\"\";s:8:\"patterns\";a:0:{}}','off');
+(479,'_site_transient_timeout_wp_theme_files_patterns-7e3ec3f407185f9a6344a35c52f42cb8','1732003958','off'),
+(480,'_site_transient_wp_theme_files_patterns-7e3ec3f407185f9a6344a35c52f42cb8','a:2:{s:7:\"version\";s:0:\"\";s:8:\"patterns\";a:0:{}}','off');
 /*!40000 ALTER TABLE `wp_options` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -960,4 +960,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2024-11-19  7:28:58
+-- Dump completed on 2024-11-19  7:48:31
