@@ -54,6 +54,7 @@ export default defineConfig(({ mode }) => {
         root,
         base: "./",
         server: {
+            host: "0.0.0.0",
             port: 1024,
             origin: mode === "wp" ? undefined : "http://localhost:1024",
         },
@@ -75,8 +76,7 @@ export default defineConfig(({ mode }) => {
                 ? resolve(__dirname, "root/cms/wp-content/themes/template-vite-wordpress/")
                 : resolve(__dirname, "dist"),
             rollupOptions: getRollupOptions(mode)
-        },
-        plugins: []
+        }
     };
 
     const imageCopyPlugin = {

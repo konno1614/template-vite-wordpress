@@ -14,22 +14,25 @@
 - 開発開始：`npm run start`
 - 開発終了：`npm run build`
 
-※作業者の環境により`compose.yaml`の30行目の`name`は変更になるので、<br />
-`npm run wp-start`でwp-envでwordpressを立ち上げ、`npm run check-hash-value`でdockerコンテナの`ハッシュ値を取得`する<br />
-30行目を<br />
-name: `取得したハッシュ値`_default
-と変更し、開発を開始する
+※作業者の環境により`compose.yaml`の30行目の`name`は変更になる
+- `npm run wp-start`でwp-envでwordpressを立ち上げる
+- `npm run check-hash-value`でdockerコンテナのハッシュ値を取得する
+- name: `取得したハッシュ値`_defaultとハッシュ値を変更し、開発を開始する
 
 ### 共同開発フロー
-- メイン作業者：`npm run build`>で都度バックアップファイルをエクスポート
-- サブ作業者：`npm run wp-start`>`npm run check-hash-value`>`compose.yamlの30行目のハッシュ値を更新`>`npm run start`で都度バックアップファイルをインポート
+- メイン作業者：`npm run build`>で開発終了と同時にバックアップファイルをエクスポート
+- サブ作業者：`npm run wp-start`>`npm run check-hash-value`>`compose.yamlの30行目のハッシュ値を更新`>`npm run start`で開発開始と同時にバックアップファイルをインポート
 
-### 納品方法
-- ファイルを更新した際、`SFTP`を使ってファイルをアップロード
-- 管理画面から更新・操作などした際、`npm run wp-export`して`/wp-content/uploads/backup.sql`にバックアップファイルを生成
-- backup.sqlをphpMyAdmin画面から生成したバックアップファイルをインポート
-- phpMyAdmin画面の`wp_options`から、`siteurl`と`home`を適切なものに更新
-- `root/.htaccess`,`root/index.php`,`root/sitemap.xml`,`root/robots.txt`,`root/cms/wp-config.php`の内容を適切なものに更新
+### 納品
+- [ ] ファイルを更新した際、`SFTP`を使ってファイルをアップロード
+- [ ] 管理画面から更新・操作などした際、`npm run wp-export`して`/wp-content/uploads/backup.sql`にバックアップファイルを生成
+- [ ] backup.sqlをphpMyAdmin画面から生成したバックアップファイルをインポート
+- [ ] phpMyAdmin画面の`wp_options`から、`siteurl`と`home`を適切なものに更新
+- [ ] root/.htaccessを更新・手動アップロード
+- [ ] root/index.phpを更新・手動アップロード
+- [ ] root/sitemap.xmlを更新・手動アップロード
+- [ ] root/robots.txtを更新・手動アップロード
+- [ ] root/cms/wp-config.phpを更新・手動アップロード
 
 ## 利用ツール
 - [wp-env](https://ja.wordpress.org/team/handbook/block-editor/reference-guides/packages/packages-env/)
