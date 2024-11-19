@@ -70,6 +70,9 @@
             <li>
                 <a href="<?php echo esc_url(home_url('/')); ?>privacy/">Privacy</a>
             </li>
+            <li>
+                <a href="<?php echo esc_url(home_url('/')); ?>contact/">Contact</a>
+            </li>
         </ul>
     </header>
 

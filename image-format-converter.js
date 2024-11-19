@@ -6,13 +6,13 @@ import sharp from 'sharp'
 
 class ImageFormatConverter {
     #defaults = {
-        srcDir: 'src',
+        srcDir: 'src/assets/images',
         distDir: 'root/cms/wp-content/themes/template-vite-wordpress',
         src: ['/**/*.{jpg,jpeg,png}'],
-        includeExtensionName: true,
+        includeExtensionName: false, // 拡張子を生成後に含めない
         formats: [
-            { type: 'webp', quality: 80 },
-            // { type: 'avif', quality: 50 }
+            { type: 'webp', quality: 80 }, // webp形式で圧縮
+            // { type: 'avif', quality: 50 } // avif形式で圧縮
         ]
     }
 
@@ -34,7 +34,7 @@ class ImageFormatConverter {
      */
     #findImagePaths() {
         const patterns = this.#options.src.map(
-        (src) => `${this.#options.srcDir}${src}`
+            (src) => `${this.#options.srcDir}${src}`
         )
         return globule.find({ src: patterns })
     }
@@ -52,22 +52,22 @@ class ImageFormatConverter {
         : imageName
         const distPath = `${this.#options.distDir}/${imageFileName}.${format.type}`
         try {
-        await sharp(imagePath)
-            .toFormat(format.type, { quality: format.quality })
-            .toFile(distPath)
-        log(
-            `Converted ${c.blue(imagePath)} to ${c.yellow(
-            format.type.toUpperCase()
-            )} ${c.green(distPath)}`
-        )
-        } catch (error) {
-        log(
-            c.red(
-            `Error converting image to ${c.yellow(
-                format.type.toUpperCase()
-            )}\n${error}`
+            await sharp(imagePath)
+                .toFormat(format.type, { quality: format.quality })
+                .toFile(distPath)
+            log(
+                `Converted ${c.blue(imagePath)} to ${c.yellow(
+                    format.type.toUpperCase()
+                )} ${c.green(distPath)}`
             )
-        )
+        } catch (error) {
+            log(
+                    c.red(
+                    `Error converting image to ${c.yellow(
+                        format.type.toUpperCase()
+                    )}\n${error}`
+                )
+            )
         }
     }
 
@@ -77,15 +77,15 @@ class ImageFormatConverter {
      */
     async #convertImages(imagePathList) {
         if (imagePathList.length === 0) {
-        log(c.red('No images found to convert'))
-        return
+            log(c.red('No images found to convert'))
+            return
         }
         for (const imagePath of imagePathList) {
-        await this.#createDistDir(imagePath)
-        const conversionPromises = this.#options.formats.map((format) =>
-            this.#convertImageFormat(imagePath, format)
-        )
-        await Promise.all(conversionPromises)
+            await this.#createDistDir(imagePath)
+            const conversionPromises = this.#options.formats.map((format) =>
+                this.#convertImageFormat(imagePath, format)
+            )
+            await Promise.all(conversionPromises)
         }
     }
 
@@ -98,14 +98,15 @@ class ImageFormatConverter {
         const path = imagePath.match(reg)[1] || ''
         const distDir = `${this.#options.distDir}/${path}`
         if (!fs.existsSync(distDir)) {
-        try {
-            fs.mkdirSync(distDir, { recursive: true })
-            log(`Created directory ${c.green(distDir)}`)
-        } catch (error) {
-            log(c.red(`Failed to create directory ${c.yellow(distDir)}\n${error}`))
-            throw error
-        }
+            try {
+                fs.mkdirSync(distDir, { recursive: true })
+                log(`Created directory ${c.green(distDir)}`)
+            } catch (error) {
+                log(c.red(`Failed to create directory ${c.yellow(distDir)}\n${error}`))
+                throw error
+            }
         }
     }
 }
+
 const imageFormatConverter = new ImageFormatConverter()
