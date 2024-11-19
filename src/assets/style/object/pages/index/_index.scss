@@ -20,6 +20,7 @@
         color: f.$c-accent;
         background-color: f.$c-shadow;
         padding: .5em;
+        font-size: 30px;
         @include f.breakpoint(sp) {
             margin-top: f.clamp-space(30, 30, 320, 1440);
         }

@@ -391,7 +391,7 @@ INSERT INTO `wp_options` VALUES
 (119,'widget_tag_cloud','a:1:{s:12:\"_multiwidget\";i:1;}','auto'),
 (120,'widget_nav_menu','a:1:{s:12:\"_multiwidget\";i:1;}','auto'),
 (121,'widget_custom_html','a:1:{s:12:\"_multiwidget\";i:1;}','auto'),
-(124,'_transient_doing_cron','1731996638.2644898891448974609375','on'),
+(124,'_transient_doing_cron','1731997543.2283699512481689453125','on'),
 (149,'theme_mods_twentytwentyfour','a:1:{s:16:\"sidebars_widgets\";a:2:{s:4:\"time\";i:1730263165;s:4:\"data\";a:3:{s:19:\"wp_inactive_widgets\";a:0:{}s:9:\"sidebar-1\";a:3:{i:0;s:7:\"block-2\";i:1;s:7:\"block-3\";i:2;s:7:\"block-4\";}s:9:\"sidebar-2\";a:2:{i:0;s:7:\"block-5\";i:1;s:7:\"block-6\";}}}}','off'),
 (150,'current_theme','template-vite-wordpress','auto'),
 (151,'theme_mods_template-vite-wordpress','a:2:{i:0;b:0;s:18:\"nav_menu_locations\";a:0:{}}','on'),
@@ -474,7 +474,7 @@ INSERT INTO `wp_options` VALUES
 (411,'wp_mail_smtp_activated','a:1:{s:4:\"lite\";i:1731918844;}','auto'),
 (412,'_transient_timeout_wp_mail_smtp_just_activated','1731918904','off'),
 (413,'_transient_wp_mail_smtp_just_activated','1','off'),
-(416,'action_scheduler_lock_async-request-runner','673c2bde4259d2.54250656|1731996698','no'),
+(416,'action_scheduler_lock_async-request-runner','673c2f68949e72.16948211|1731997604','no'),
 (419,'wp_mail_smtp_migration_version','5','on'),
 (420,'wp_mail_smtp_debug_events_db_version','1','on'),
 (423,'wp_mail_smtp_review_notice','a:2:{s:4:\"time\";i:1731918919;s:9:\"dismissed\";b:0;}','auto'),
@@ -526,7 +526,7 @@ CREATE TABLE `wp_postmeta` (
   PRIMARY KEY (`meta_id`),
   KEY `post_id` (`post_id`),
   KEY `meta_key` (`meta_key`(191))
-) ENGINE=InnoDB AUTO_INCREMENT=64 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=67 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -598,7 +598,10 @@ INSERT INTO `wp_postmeta` VALUES
 (60,8,'_wp_old_slug','%e3%81%8a%e7%9f%a5%e3%82%89%e3%81%9b'),
 (61,36,'_edit_last','1'),
 (62,36,'_edit_lock','1731996342:1'),
-(63,36,'_encloseme','1');
+(63,36,'_encloseme','1'),
+(64,38,'_edit_last','1'),
+(65,38,'_edit_lock','1731997433:1'),
+(66,38,'_encloseme','1');
 /*!40000 ALTER TABLE `wp_postmeta` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -638,7 +641,7 @@ CREATE TABLE `wp_posts` (
   KEY `type_status_date` (`post_type`,`post_status`,`post_date`,`ID`),
   KEY `post_parent` (`post_parent`),
   KEY `post_author` (`post_author`)
-) ENGINE=InnoDB AUTO_INCREMENT=38 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=40 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -675,7 +678,9 @@ INSERT INTO `wp_posts` VALUES
 (34,1,'2024-11-19 15:03:19','2024-11-19 06:03:19','テキストテキストテキストテキストテキストテキスト','お知らせ04','','publish','closed','closed','','news04','','','2024-11-19 15:03:19','2024-11-19 06:03:19','',0,'http://localhost:8888/?p=34',0,'post','',0),
 (35,1,'2024-11-19 15:03:19','2024-11-19 06:03:19','テキストテキストテキストテキストテキストテキスト','お知らせ04','','inherit','closed','closed','','34-revision-v1','','','2024-11-19 15:03:19','2024-11-19 06:03:19','',34,'http://localhost:8888/?p=35',0,'revision','',0),
 (36,1,'2024-11-19 15:08:04','2024-11-19 06:08:04','テキスト','MacBook Airからの投稿','','publish','closed','closed','','macbook-air-post','','','2024-11-19 15:08:04','2024-11-19 06:08:04','',0,'http://localhost:8888/?p=36',0,'post','',0),
-(37,1,'2024-11-19 15:08:04','2024-11-19 06:08:04','テキスト','MacBook Airからの投稿','','inherit','closed','closed','','36-revision-v1','','','2024-11-19 15:08:04','2024-11-19 06:08:04','',36,'http://localhost:8888/?p=37',0,'revision','',0);
+(37,1,'2024-11-19 15:08:04','2024-11-19 06:08:04','テキスト','MacBook Airからの投稿','','inherit','closed','closed','','36-revision-v1','','','2024-11-19 15:08:04','2024-11-19 06:08:04','',36,'http://localhost:8888/?p=37',0,'revision','',0),
+(38,1,'2024-11-19 15:26:16','2024-11-19 06:26:16','text','mac miniからの投稿','','publish','closed','closed','','mac-mini-post','','','2024-11-19 15:26:16','2024-11-19 06:26:16','',0,'http://localhost:8888/?p=38',0,'post','',0),
+(39,1,'2024-11-19 15:26:16','2024-11-19 06:26:16','text','mac miniからの投稿','','inherit','closed','closed','','38-revision-v1','','','2024-11-19 15:26:16','2024-11-19 06:26:16','',38,'http://localhost:8888/?p=39',0,'revision','',0);
 /*!40000 ALTER TABLE `wp_posts` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -709,7 +714,8 @@ INSERT INTO `wp_term_relationships` VALUES
 (18,1,0),
 (31,4,0),
 (34,2,0),
-(36,3,0);
+(36,3,0),
+(38,3,0);
 /*!40000 ALTER TABLE `wp_term_relationships` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -742,7 +748,7 @@ LOCK TABLES `wp_term_taxonomy` WRITE;
 INSERT INTO `wp_term_taxonomy` VALUES
 (1,1,'category','',0,0),
 (2,2,'category','',0,3),
-(3,3,'category','',0,2),
+(3,3,'category','',0,3),
 (4,4,'product-cat','',0,1);
 /*!40000 ALTER TABLE `wp_term_taxonomy` ENABLE KEYS */;
 UNLOCK TABLES;
@@ -954,4 +960,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2024-11-19  6:11:01
+-- Dump completed on 2024-11-19  6:26:34
