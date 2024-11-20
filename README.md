@@ -35,6 +35,7 @@
 - [ ] root/cms/wp-config.phpを更新・手動アップロード
 
 ## 利用ツール
+- [Node.js](https://nodejs.org/en/)
 - [wp-env](https://ja.wordpress.org/team/handbook/block-editor/reference-guides/packages/packages-env/)
 - [Docker Desktop](https://www.docker.com/ja-jp/products/docker-desktop/)
 
@@ -207,9 +208,30 @@
             └── backup.sql
 ```
 
-### 推奨 node バーション
+### 推奨Nodeバーション
 ```
 node.js(version: v22.9.0)
+```
+
+#### Nodeバージョン確認
+```
+node -v
+```
+
+#### ダウンロード可能なバージョンを確認
+※homebrewとnodebrewをインストール済みの想定
+```
+nodebrew ls-remote
+```
+
+#### 指定のバージョンをインストール
+```
+nodebrew install-binary v22.9.0
+```
+
+#### 指定のバージョンに切り替え
+```
+nodebrew use v22.9.0
 ```
 
 ### 依存ファイルインストール
@@ -275,7 +297,8 @@ npm install --legacy-peer-deps
 ```
 ▲更新された`package.json`に合わせた新しいバージョンがインストールされる
 
-##　開発環境作成の参考URL
+## 開発環境作成の参考URL
+- [Nodeのバージョンを変更したい](https://qiita.com/At-wg918/items/e82cdfc22e7dc688ca32)
 - [@wordpress/env](https://ja.wordpress.org/team/handbook/block-editor/reference-guides/packages/packages-env/)
 - [wp-envとViteで作る爆速WordPress開発環境](https://zenn.dev/crayfisher_zari/articles/f2d38f536eaf02)
 - [【Node.js】sharp でサクッと「AVIF」「WebP」生成](https://qiita.com/taqumo/items/60de0af9699415150035)
