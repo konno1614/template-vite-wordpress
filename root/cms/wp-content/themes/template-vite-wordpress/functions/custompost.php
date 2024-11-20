@@ -5,6 +5,7 @@
 add_action('init', 'create_post_type');
 function create_post_type()
 {
+    // 商品(product)のカスタム投稿タイプ
     register_post_type(
         'product', //カスタム投稿タイプ名を指定
         array(
@@ -36,6 +37,44 @@ function create_post_type()
             'update_count_callback' => '_update_post_term_count',
             'label' => '商品-カテゴリー',
             'singular_label' => '商品-カテゴリー',
+            'has_archive' => true, /* アーカイブページを持つ */
+            'public' => true,
+            'show_ui' => true
+        )
+    );
+
+    // WEB制作(web)のカスタム投稿タイプ
+    register_post_type(
+        'web', //カスタム投稿タイプ名を指定
+        array(
+            'labels' => array(
+                'name' => __('WEB制作一覧'),
+                'singular_name' => __('WEB制作'),
+                'add_new' => __('新規WEB制作', 'book'),
+                'add_new_item' => __('新規WEB制作を追加'),
+                'edit_item' => __('WEB制作を編集する'),
+                'new_item' => __('新しいWEB制作'),
+                'view_item' => __('WEB制作を表示する'),
+                'search_items' => __('WEB制作を検索'),
+                'not_found' =>  __('WEB制作はありません'),
+                'not_found_in_trash' => __('ゴミ箱にWEB制作はありません'),
+                'parent_item_colon' => ''
+            ),
+            'public' => true,
+            'hierarchical' => true,
+            'has_archive' => true, /* アーカイブページを持つ */
+            'menu_icon' => 'dashicons-tag',
+            'supports' => array('title', 'editor', 'thumbnail')
+        )
+    );
+    register_taxonomy(
+        'web-cat', /* タクソノミーの名前 */
+        'web', /* 使用するカスタム投稿タイプ名 */
+        array(
+            'hierarchical' => true, /* trueだと親子関係が使用可能。falseで使用不可 */
+            'update_count_callback' => '_update_post_term_count',
+            'label' => 'WEB制作-カテゴリー',
+            'singular_label' => 'WEB制作-カテゴリー',
             'has_archive' => true, /* アーカイブページを持つ */
             'public' => true,
             'show_ui' => true
