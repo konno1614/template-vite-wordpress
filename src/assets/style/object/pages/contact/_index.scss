@@ -1,6 +1,8 @@
 @use "../../../foundation/index" as f;
 
 .p-contact {
+    @include f.breakpoint(sp) {
+    }
     &__section {
         &+& {
             margin-top: 50px;

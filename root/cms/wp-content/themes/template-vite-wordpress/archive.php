@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-<main class="l-main p-news">
+<div class="p-news">
     <div class="l-inner">
         <div class="p-news__contents">
             <?php if (have_posts()): ?>
@@ -30,6 +30,6 @@
             <?php get_template_part('component/pager'); ?>
         </div>
     </div>
-</main>
+</div>
 
 <?php get_footer(); ?>

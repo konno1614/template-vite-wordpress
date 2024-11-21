@@ -1,6 +1,9 @@
 @use "../foundation/index" as f;
 
 .l-header {
+    h1 {
+        max-width: 150px;
+    }
     @include f.breakpoint(sp) {
     }
 }

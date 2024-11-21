@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-<main class="l-main p-news">
+<div class="p-news">
     <div class="l-inner">
         <div class="p-news__contents">
             <?php if (have_posts()): ?>
@@ -31,6 +31,6 @@
             <a href="<?php echo esc_url(home_url('/')); ?>news/">News一覧へ</a>
         </div>
     </div>
-</main>
+</div>
 
 <?php get_footer(); ?>

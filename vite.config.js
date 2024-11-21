@@ -4,7 +4,6 @@ import { globSync } from "glob";
 import { fileURLToPath } from "node:url";
 import fs from "fs-extra";
 import autoprefixer from 'autoprefixer';
-import tailwindcss from 'tailwindcss';
 import postcssNormalizeCharset from 'postcss-normalize-charset';
 import postcssSortMediaQueries from 'postcss-sort-media-queries';
 import cssDeclarationSorter from 'css-declaration-sorter';
@@ -72,7 +71,6 @@ export default defineConfig(({ mode }) => {
             postcss: {
                 plugins: [
                     autoprefixer,
-                    tailwindcss,
                     postcssNormalizeCharset,
                     postcssSortMediaQueries,
                     cssDeclarationSorter({

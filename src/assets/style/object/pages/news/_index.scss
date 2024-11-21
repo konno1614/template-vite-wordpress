@@ -2,9 +2,7 @@
 @use "./news-single";
 
 .p-news {
-    background-color: #ededed;
     @include f.breakpoint(sp) {
-        background-color: #f4f4f4;
     }
     &__contents {
 

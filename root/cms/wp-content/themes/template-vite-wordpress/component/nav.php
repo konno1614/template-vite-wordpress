@@ -12,7 +12,16 @@
             <a href="<?php echo esc_url(home_url('/')); ?>sample/">Sample</a>
         </li>
         <li>
+            <a href="<?php echo esc_url(home_url('/')); ?>product/">Product</a>
+        </li>
+        <li>
+            <a href="<?php echo esc_url(home_url('/')); ?>web/">Web</a>
+        </li>
+        <li>
             <a href="<?php echo esc_url(home_url('/')); ?>privacy/">Privacy</a>
+        </li>
+        <li>
+            <a href="<?php echo esc_url(home_url('/')); ?>contact/">Contact</a>
         </li>
     </ul>
 </nav>

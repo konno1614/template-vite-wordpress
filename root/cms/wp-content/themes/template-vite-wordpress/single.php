@@ -2,17 +2,17 @@
 
 <?php get_template_part('component/common_head'); ?>
 
-<div class="p-common p-news p-newsSingle">
-    <ul class="p-news__categories">
-        <li class="<?php echo is_category() ? '' : 'all'; ?>">
-            <a href="<?php echo esc_url(home_url('/')); ?>news/">すべて</a>
-        </li>
-        <?php if (have_posts()) : ?>
-            <?php wp_list_categories('title_li=&order=ASC'); ?>
-        <?php endif; ?>
-    </ul>
-    <article class="p-news__contents">
-        <div class="l-inner l-inner--narrow">
+<div class="p-news p-newsSingle">
+    <div class="l-inner">
+        <ul class="p-news__categories">
+            <li class="<?php echo is_category() ? '' : 'all'; ?>">
+                <a href="<?php echo esc_url(home_url('/')); ?>news/">すべて</a>
+            </li>
+            <?php if (have_posts()) : ?>
+                <?php wp_list_categories('title_li=&order=ASC'); ?>
+            <?php endif; ?>
+        </ul>
+        <article class="p-news__contents">
             <?php if (have_posts()): ?>
                 <?php while (have_posts()): the_post(); ?>
                     <div class="p-newsSingle__head">
@@ -37,8 +37,8 @@
             <div class="p-newsSingle__foot">
                 <?php get_template_part('component/prevnext'); ?>
             </div>
-        </div>
-    </article>
+        </article>
+    </div>
 </div>
 
 <?php get_footer(); ?>
