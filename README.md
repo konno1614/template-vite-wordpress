@@ -35,6 +35,7 @@
 - [ ] root/cms/wp-config.phpを更新・手動アップロード
 
 ## 利用ツール
+- [Node.js](https://nodejs.org/en/)
 - [wp-env](https://ja.wordpress.org/team/handbook/block-editor/reference-guides/packages/packages-env/)
 - [Docker Desktop](https://www.docker.com/ja-jp/products/docker-desktop/)
 
@@ -44,8 +45,10 @@
 | 項目 | 値 |
 | - | - |
 | 静的サイトURL | http://localhost:1024/ |
-| 動的サイトURL | http://localhost:8888/ |
-| 管理画面URL | http://localhost:8888/wp-admin/ |
+| 開発用サイトURL | http://localhost:8888/ |
+| 開発用サイト管理画面URL | http://localhost:8888/wp-admin/ |
+| テスト用サイトURL | http://localhost:8889/ |
+| テスト用サイト管理画面URL | http://localhost:8889/wp-admin/ |
 | ユーザー | admin |
 | パスワード | password |
 
@@ -63,6 +66,21 @@
 | - | - |
 | URL | http://localhost:8025/ |
 | 送信テスト用メールアドレス | wordpress@example.com |
+
+### データベースの接続
+`npm run wp-start`の実行結果としてポート番号が参照できる
+```
+MySQL is listening on port { MYSQL_PORT_NUMBER }
+```
+「Sequel Ace」などのGUIツールからMySQLインスタンスに接続可能
+| 項目 | 値 |
+| - | - |
+| ホスト | 127.0.0.1 |
+| ユーザー名 | root |
+| パスワード | password |
+| データベース | wordpress |
+| ポート | { MYSQL_PORT_NUMBER } |
+
 
 ## テスト・本番環境
 
@@ -187,15 +205,18 @@
     │
     └── root/cms/wp-content
         ├── plugins
+        │   └── wp-multibyte-patch // Other files used by wordpress project.
         ├── themes
-        │   └── konnotes
-        │       ├── index.php  // Other files used by wordpress.
+        │   └── template-vite-wordpress
+        │       ├── index.php  // Other files used by wordpress project.
         │       ├── assets
         │       │   ├── images
         │       │   ├── css
         │       │   └── js
         │       ├── css
         │       │   └── uncompressed.css
+        │       ├── img
+        │       │   └── uncompressed.jpg
         │       ├── font
         │       │   └── *.ttf etc...
         │       ├── js
@@ -207,9 +228,30 @@
             └── backup.sql
 ```
 
-### 推奨 node バーション
+### 推奨Nodeバーション
 ```
 node.js(version: v22.9.0)
+```
+
+#### Nodeバージョン確認
+```
+node -v
+```
+
+#### ダウンロード可能なバージョンを確認
+※homebrewとnodebrewをインストール済みの想定
+```
+nodebrew ls-remote
+```
+
+#### 指定のバージョンをインストール
+```
+nodebrew install-binary v22.9.0
+```
+
+#### 指定のバージョンに切り替え
+```
+nodebrew use v22.9.0
 ```
 
 ### 依存ファイルインストール
@@ -227,24 +269,39 @@ npm run wp-start
 npm run wp-stop
 ```
 
-### 開発開始
+### /src開発開始
 ```
 npm run dev
 ```
 
-### 開発終了
+### /src開発終了
 ```
 npm run build
 ```
 
-### SQLファイルのエクスポート
+### SQLファイル（バックアップファイル）のエクスポート
 ```
 npm run wp-export
 ```
 
-### SQLファイルのインポート
+### SQLファイル（バックアップファイル）のインポート
 ```
 npm run wp-import
+```
+
+### SQLファイル（バックアップファイル）のリセット
+```
+npm run wp-db-reset
+```
+
+### SQLファイル（バックアップファイル）のデータ置換
+```
+npm run wp-db-replace
+```
+
+### 画像最適化
+```
+npm run image-format-converter
 ```
 
 ## npmパッケージアップデート
@@ -275,7 +332,8 @@ npm install --legacy-peer-deps
 ```
 ▲更新された`package.json`に合わせた新しいバージョンがインストールされる
 
-##　開発環境作成の参考URL
+## 開発環境作成の参考URL
+- [Nodeのバージョンを変更したい](https://qiita.com/At-wg918/items/e82cdfc22e7dc688ca32)
 - [@wordpress/env](https://ja.wordpress.org/team/handbook/block-editor/reference-guides/packages/packages-env/)
 - [wp-envとViteで作る爆速WordPress開発環境](https://zenn.dev/crayfisher_zari/articles/f2d38f536eaf02)
 - [【Node.js】sharp でサクッと「AVIF」「WebP」生成](https://qiita.com/taqumo/items/60de0af9699415150035)
