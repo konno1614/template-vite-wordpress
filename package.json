@@ -10,7 +10,7 @@
     },
     "scripts": {
         "start": "npm-run-all wp-start wp-import docker-start dev",
-        "build": "npm-run-all delete-public delete-assets build-wp image-format-converter docker-stop wp-export wp-stop",
+        "build": "npm-run-all delete-public delete-assets build-wp image-format-converter remove-empty-dirs docker-stop wp-export wp-stop",
         "dev": "vite --host",
         "build-static": "rm -rf dist && vite build",
         "build-wp": "vite build --mode wp",
@@ -27,10 +27,10 @@
         "docker-stop": "docker-compose down",
         "check-hash-value": "node_modules/.bin/wp-env install-path",
         "image-format-converter": "node ./image-format-converter.js",
+        "remove-empty-dirs": "node remove-empty-dirs.js",
         "preview-static": "vite preview",
         "delete-assets": "rimraf root/cms/wp-content/themes/template-vite-wordpress/assets",
-        "delete-public": "rimraf root/cms/wp-content/themes/template-vite-wordpress/css root/cms/wp-content/themes/template-vite-wordpress/js root/cms/wp-content/themes/template-vite-wordpress/font root/cms/wp-content/themes/template-vite-wordpress/img root/cms/wp-content/themes/template-vite-wordpress/json",
-        "remove-empty-dirs": "node remove-empty-dirs.js"
+        "delete-public": "rimraf root/cms/wp-content/themes/template-vite-wordpress/css root/cms/wp-content/themes/template-vite-wordpress/js root/cms/wp-content/themes/template-vite-wordpress/font root/cms/wp-content/themes/template-vite-wordpress/img root/cms/wp-content/themes/template-vite-wordpress/json"
     },
     "devDependencies": {
         "@tailwindcss/forms": "^0.5.9",
