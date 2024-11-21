@@ -26,3 +26,7 @@ dist-ssr
 # Husky config file
 .husky/.gitignore
 _
+
+# theme
+root/cms/wp-content/themes/*
+!root/cms/wp-content/themes/template-vite-wordpress
