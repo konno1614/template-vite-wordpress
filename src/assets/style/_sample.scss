@@ -1,0 +1,19 @@
+.sample {
+    &__title {
+        color: f.$c-main;
+        font-size: f.clamp-vw(20, 40, 320, 1440);
+        line-height: calc(60 / 40);
+        letter-spacing: calc(75em / 1000);
+        padding: f.clamp-space(15, 30, 320, 1440);
+        margin-block-start: calc(10px + var(--leading-trim));
+        @include f.breakpoint(sp) {
+            margin-block-end: calc(10px + var(--leading-trim));
+        }
+    }
+    &__bg {
+        background-image: url(/assets/images/background.png);
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: contain;
+    }
+}

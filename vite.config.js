@@ -4,6 +4,10 @@ import { globSync } from "glob";
 import { fileURLToPath } from "node:url";
 import fs from "fs-extra";
 import autoprefixer from 'autoprefixer';
+import tailwindcss from 'tailwindcss';
+import postcssNormalizeCharset from 'postcss-normalize-charset';
+import postcssSortMediaQueries from 'postcss-sort-media-queries';
+import cssDeclarationSorter from 'css-declaration-sorter';
 
 const root = resolve(__dirname, "src");
 
@@ -67,7 +71,13 @@ export default defineConfig(({ mode }) => {
             devSourcemap: true,
             postcss: {
                 plugins: [
-                    autoprefixer()
+                    autoprefixer,
+                    tailwindcss,
+                    postcssNormalizeCharset,
+                    postcssSortMediaQueries,
+                    cssDeclarationSorter({
+                        order: 'smacss',
+                    }),
                 ]
             },
         },
@@ -76,7 +86,9 @@ export default defineConfig(({ mode }) => {
                 ? resolve(__dirname, "root/cms/wp-content/themes/template-vite-wordpress/")
                 : resolve(__dirname, "dist"),
             rollupOptions: getRollupOptions(mode)
-        }
+        },
+        plugins: [
+        ],
     };
 
     const imageCopyPlugin = {

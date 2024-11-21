@@ -67,6 +67,21 @@
 | URL | http://localhost:8025/ |
 | 送信テスト用メールアドレス | wordpress@example.com |
 
+### データベースの接続
+`npm run wp-start`の実行結果としてポート番号が参照できる
+```
+MySQL is listening on port { MYSQL_PORT_NUMBER }
+```
+「Sequel Ace」などのGUIツールからMySQLインスタンスに接続可能
+| 項目 | 値 |
+| - | - |
+| ホスト | 127.0.0.1 |
+| ユーザー名 | root |
+| パスワード | password |
+| データベース | wordpress |
+| ポート | { MYSQL_PORT_NUMBER } |
+
+
 ## テスト・本番環境
 
 ### サーバー構成
