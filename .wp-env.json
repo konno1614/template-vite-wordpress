@@ -11,6 +11,8 @@
         "WPMS_MAILER": "smtp"
     },
     "themes":["./root/cms/wp-content/themes/template-vite-wordpress"],
+    "port": 8888,
+	"testsPort": 8889,
     "mappings": {
         "wp-content/plugins": "./root/cms/wp-content/plugins",
         "wp-content/themes": "./root/cms/wp-content/themes",

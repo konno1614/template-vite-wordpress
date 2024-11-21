@@ -21,6 +21,8 @@
         "wp-destroy": "wp-env destroy",
         "wp-export": "wp-env run cli wp db export /var/www/html/wp-content/uploads/backup.sql",
         "wp-import": "wp-env run cli wp db reset --yes && wp-env run cli wp db import /var/www/html/wp-content/uploads/backup.sql",
+        "wp-db-reset": "wp-env run cli wp db reset",
+        "wp-db-replace": "wp-env run cli wp search-replace 'https://replace-source.com' 'https://replace-destination.com/'",
         "docker-start": "docker-compose up -d",
         "docker-stop": "docker-compose down",
         "check-hash-value": "node_modules/.bin/wp-env install-path",

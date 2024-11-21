@@ -45,8 +45,10 @@
 | 項目 | 値 |
 | - | - |
 | 静的サイトURL | http://localhost:1024/ |
-| 動的サイトURL | http://localhost:8888/ |
-| 管理画面URL | http://localhost:8888/wp-admin/ |
+| 開発用サイトURL | http://localhost:8888/ |
+| 開発用サイト管理画面URL | http://localhost:8888/wp-admin/ |
+| テスト用サイトURL | http://localhost:8889/ |
+| テスト用サイト管理画面URL | http://localhost:8889/wp-admin/ |
 | ユーザー | admin |
 | パスワード | password |
 
@@ -188,15 +190,18 @@
     │
     └── root/cms/wp-content
         ├── plugins
+        │   └── wp-multibyte-patch // Other files used by wordpress project.
         ├── themes
-        │   └── konnotes
-        │       ├── index.php  // Other files used by wordpress.
+        │   └── template-vite-wordpress
+        │       ├── index.php  // Other files used by wordpress project.
         │       ├── assets
         │       │   ├── images
         │       │   ├── css
         │       │   └── js
         │       ├── css
         │       │   └── uncompressed.css
+        │       ├── img
+        │       │   └── uncompressed.jpg
         │       ├── font
         │       │   └── *.ttf etc...
         │       ├── js
@@ -249,24 +254,39 @@ npm run wp-start
 npm run wp-stop
 ```
 
-### 開発開始
+### /src開発開始
 ```
 npm run dev
 ```
 
-### 開発終了
+### /src開発終了
 ```
 npm run build
 ```
 
-### SQLファイルのエクスポート
+### SQLファイル（バックアップファイル）のエクスポート
 ```
 npm run wp-export
 ```
 
-### SQLファイルのインポート
+### SQLファイル（バックアップファイル）のインポート
 ```
 npm run wp-import
+```
+
+### SQLファイル（バックアップファイル）のリセット
+```
+npm run wp-db-reset
+```
+
+### SQLファイル（バックアップファイル）のデータ置換
+```
+npm run wp-db-replace
+```
+
+### 画像最適化
+```
+npm run image-format-converter
 ```
 
 ## npmパッケージアップデート
