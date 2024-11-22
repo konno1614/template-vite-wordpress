@@ -1,0 +1,6 @@
+@use "../../foundation/index" as f;
+
+.c-prevnext {
+    @include f.breakpoint(sp) {
+    }
+}

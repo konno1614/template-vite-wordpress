@@ -4,9 +4,6 @@
 .p-news {
     @include f.breakpoint(sp) {
     }
-    &__contents {
-
-    }
     &__list {
 
         li {
@@ -18,12 +15,5 @@
     &__not-yet {
         margin-top: 1em;
         text-align: center;
-    }
-    &__back {
-        margin-top: 1em;
-        text-align: center;
-    }
-    &__nav {
-        margin-top: 1em;
     }
 }

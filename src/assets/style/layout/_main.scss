@@ -1,6 +1,8 @@
 @use "../foundation/index" as f;
 
 .l-main {
+    border: 1px solid f.$c-accent;
+    padding: f.clamp-space(15, 20, 320, 1440);
     @include f.breakpoint(sp) {
     }
 }

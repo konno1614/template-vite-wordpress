@@ -1,4 +1,4 @@
-<ul>
+<ul class="c-prevnext">
     <li class="prev">
         <?php
         $prev_post = get_previous_post();

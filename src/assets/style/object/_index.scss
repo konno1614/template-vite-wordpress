@@ -3,6 +3,8 @@
 @use "./component/sp-nav";
 @use "./component/title";
 @use "./component/button";
+@use "./component/prevnext";
+@use "./component/pager";
 
 @use "./pages/index/index" as indexPage;
 @use "./pages/sample/index" as samplePage;

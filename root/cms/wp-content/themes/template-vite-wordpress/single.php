@@ -2,7 +2,7 @@
 
 <?php get_template_part('component/common_head'); ?>
 
-<div class="p-news p-newsSingle">
+<div class="p-news p-news-single">
     <div class="l-inner">
         <ul class="p-news__categories">
             <li class="<?php echo is_category() ? '' : 'all'; ?>">
@@ -12,10 +12,10 @@
                 <?php wp_list_categories('title_li=&order=ASC'); ?>
             <?php endif; ?>
         </ul>
-        <article class="p-news__contents">
+        <article class="p-news-single__contents">
             <?php if (have_posts()): ?>
                 <?php while (have_posts()): the_post(); ?>
-                    <div class="p-newsSingle__head">
+                    <div class="p-news-single__head">
                         <time><?php the_time('Y.m.d'); ?></time>
                         <?php
                         $categories = get_the_category();
@@ -29,12 +29,12 @@
                         ?>
                         <h3><?php the_title(); ?></h3>
                     </div>
-                    <div class="p-newsSingle__body">
+                    <div class="p-news-single__body">
                         <?php the_content(); ?>
                     </div>
                 <?php endwhile; ?>
             <?php endif; ?>
-            <div class="p-newsSingle__foot">
+            <div class="p-news-single__foot">
                 <?php get_template_part('component/prevnext'); ?>
             </div>
         </article>
