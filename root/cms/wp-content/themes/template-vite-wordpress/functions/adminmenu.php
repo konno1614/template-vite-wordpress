@@ -70,6 +70,8 @@ function add_page_columns_name($columns)
     $columns['slug'] = "スラッグ";
     return $columns;
 }
+add_filter('manage_pages_columns', 'add_page_columns_name');
+
 function add_page_column($column_name, $post_id)
 {
     if ($column_name == 'slug') {
@@ -78,15 +80,4 @@ function add_page_column($column_name, $post_id)
         echo attribute_escape($slug);
     }
 }
-add_filter('manage_pages_columns', 'add_page_columns_name');
 add_action('manage_pages_custom_column', 'add_page_column', 10, 2);
-
-
-
-/*---------------------------------------------------------*/
-/* 管理画面に説明文
-/*---------------------------------------------------------*/
-// add_action( 'edit_form_after_editor', 'after_editor' );
-// function after_editor() {
-//   echo '<p>画像を半分にする:imgタグに.img-half</p>';
-// }

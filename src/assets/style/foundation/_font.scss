@@ -19,16 +19,11 @@
     $variable-vw: calc(100 * $valiable-part * 1vw);
 
     @return clamp($min-rem, $variable-rem + $variable-vw, $max-rem);
-
-    // Example of description
-    // font-size: f.clamp-vw(18, 20, 320, 1440);
 }
 
 // adjustment line-height
 :root {
     --leading-trim: calc((1em - 1lh) / 2);
-    // Example of description
-    // margin-block-start: calc(40px + var(--leading-trim));
 }
 
 // font-settings

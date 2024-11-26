@@ -1,8 +1,60 @@
 @use "../../../foundation/index" as f;
 
-.c-news-single {
-    background-color: #ededed;
+.p-news-single {
     @include f.breakpoint(sp) {
-        background-color: #f4f4f4;
+    }
+    &__contents {
+    }
+    &__head {
+        border: 1px solid f.$c-shadow;
+        .thumbnail {
+        }
+        .time {
+            display: block;
+            margin-top: 1em;
+        }
+        .title {
+            margin-top: 1em;
+        }
+        .category {
+            margin-top: 1em;
+            a {
+                display: inline-block;
+                margin-right: 1em;
+                margin-bottom: .5em;
+                color: f.$c-main;
+                text-decoration: underline;
+            }
+        }
+        .tag {
+            margin-top: 1em;
+            a {
+                display: inline-block;
+                margin-right: 1em;
+                margin-bottom: .5em;
+                color: f.$c-accent;
+                text-decoration: underline;
+            }
+        }
+    }
+    &__body {
+        margin-top: 1em;
+        border: 1px solid f.$c-main;
+        >* {
+            margin-bottom: 40px;
+            @include f.breakpoint(sp) {
+                margin-bottom: 20px;
+            }
+        }
+        p {
+
+        }
+    }
+    &__foot {
+        margin-top: 1em;
+        border: 1px solid f.$c-sub;
+    }
+    &__related {
+        margin-top: 5em;
     }
 }

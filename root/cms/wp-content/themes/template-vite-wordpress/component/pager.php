@@ -8,7 +8,7 @@ $paginationhtml = get_the_posts_pagination(
         'mid_size'           => 2, // 現在のページ番号の前後に表示するページ番号の数
         'screen_reader_text' => ' ', // スクリーンリーダーテキストを空にして視覚的な表示を防ぐ
         'prev_next'          => false, // 次へ・前へリンクを無効化
-        'class'              => 'p-news__nav', // navタグに追加する任意のクラス
+        'class'              => 'c-pager', // navタグに追加する任意のクラス
     )
 );
 

@@ -1,4 +1,4 @@
-<ul>
+<ul class="c-prevnext">
     <li class="prev">
         <?php
         $prev_post = get_previous_post();
@@ -12,7 +12,13 @@
         <?php else: ?>
         <?php endif; ?>
     </li>
-    <li class="index"><a href="<?php echo esc_url(home_url('/')); ?>news/"></a></li>
+    <li class="index">
+        <?php if (is_singular('post')): ?>
+            <a href="<?php echo esc_url(home_url('/')); ?>news/">一覧へ</a>
+        <?php elseif (is_singular('custom-post-sample')): ?>
+            <a href="<?php echo esc_url(home_url('/')); ?>custom-post-sample/">一覧へ</a>
+        <?php endif; ?>
+    </li>
     <li class="next">
         <?php
         $next_post = get_next_post();

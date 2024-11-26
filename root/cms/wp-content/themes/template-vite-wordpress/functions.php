@@ -7,7 +7,7 @@ get_template_part('functions/wpheader'); // wpheader出力制御
 get_template_part('functions/enqueue'); // css,js読み込み
 get_template_part('functions/image'); // 画像
 get_template_part('functions/pregetpost'); // メインクエリ
-// get_template_part('functions/search'); // 検索
+get_template_part('functions/search'); // 検索
 get_template_part('functions/pankuzu'); // パンくず
 // get_template_part('functions/mobile'); // pcとモバイル
 // get_template_part('functions/optionpage'); // optionpage

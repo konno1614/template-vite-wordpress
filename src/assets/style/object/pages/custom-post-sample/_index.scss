@@ -1,0 +1,99 @@
+@use "../../../foundation/index" as f;
+@use "./custom-post-sample-single";
+
+.p-custom-post-sample {
+    @include f.breakpoint(sp) {
+    }
+    &__categories {
+        margin-top: f.clamp-space(20, 40, 320, 1440);
+        ul {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(min(100%, 200px), 1fr));
+            gap: 20px;
+            @include f.breakpoint(sp) {
+                gap: 15px;
+            }
+            li {
+                border: 1px solid f.$c-main;
+                a {
+                    display: block;
+                    &:hover {
+                        background-color: f.$c-main;
+                        color: f.$c-white;
+                    }
+                }
+            }
+        }
+    }
+    &__contents {
+        margin-top: f.clamp-space(20, 40, 320, 1440);
+    }
+    &__list {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(min(100%, 400px), 1fr));
+        gap: 40px;
+        li {
+            border: 1px solid f.$c-shadow;
+            padding: f.clamp-space(15, 20, 320, 1440);
+            &+li {
+            }
+            a {
+                display: block;
+                border: 1px solid f.$c-accent;
+                padding: f.clamp-space(15, 20, 320, 1440);
+                &:hover {
+                    background-color: f.$c-shadow;
+                    color: f.$c-white;
+                }
+            }
+            .thumbnail {
+            }
+            .time {
+                display: block;
+                margin-top: 1em;
+            }
+            .title {
+                margin-top: 1em;
+            }
+            .acf {
+                margin-top: 1em;
+            }
+            .category {
+                margin-top: 1em;
+                a {
+                    display: inline-block;
+                    margin-right: 1em;
+                    margin-bottom: .5em;
+                    color: f.$c-main;
+                    text-decoration: underline;
+                }
+            }
+            .tag {
+                margin-top: 1em;
+                a {
+                    display: inline-block;
+                    margin-right: 1em;
+                    margin-bottom: .5em;
+                    color: f.$c-accent;
+                    text-decoration: underline;
+                }
+            }
+        }
+        &--min {
+            grid-template-columns: repeat(auto-fill, minmax(min(100%, 200px), 1fr));
+            gap: 20px;
+        }
+    }
+    &__not-yet {
+        margin-top: f.clamp-space(20, 40, 320, 1440);
+        text-align: center;
+    }
+    &__pager {
+        margin-top: f.clamp-space(20, 40, 320, 1440);
+        text-align: center;
+    }
+    &__back {
+        margin-top: f.clamp-space(20, 40, 320, 1440);
+        text-align: center;
+    }
+}
