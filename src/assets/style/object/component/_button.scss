@@ -1,6 +1,19 @@
 @use "../../foundation/index" as f;
 
 .c-button {
+    background-color: f.$c-accent;
+    color: f.$c-white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 320px;
+    height: 60px;
+    border-radius: 100vh;
+    border: none;
+    margin: 0 auto;
+    font-size: f.clamp-vw(16, 16, 320, 1440);
+    line-height: 100%;
     @include f.breakpoint(sp) {
     }
 }

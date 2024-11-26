@@ -1,4 +1,5 @@
 <?php
+// 通常投稿タイプの登録
 function post_has_archive($args, $post_type)
 {
     if ('post' == $post_type) {
@@ -12,10 +13,12 @@ function post_has_archive($args, $post_type)
 }
 add_filter('register_post_type_args', 'post_has_archive', 10, 2);
 
+
+// 一覧ページに表示する投稿数
 function modify_posts_per_page($query)
 {
     if (!is_admin() && $query->is_main_query() && $query->is_post_type_archive('post')) {
-        $query->set('posts_per_page', 3);  // 一覧ページに表示する投稿数
+        $query->set('posts_per_page', -1);
         $query->set('orderby', 'post_date');
         $query->set('order', 'DESC');
     }

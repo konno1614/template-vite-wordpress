@@ -44,9 +44,6 @@
     <!-- files -->
     <link rel="stylesheet" href="<?php echo $root; ?>/assets/style/style.<?php echo $css_ext ?>">
     <script src="<?php echo $root; ?>/assets/js/script.<?php echo $js_ext ?>" type="module"></script>
-    <?php if (is_archive() || is_single()) { ?>
-        <script src="<?php echo $root; ?>/assets/js/news.<?php echo $js_ext ?>" type="module"></script>
-    <?php } ?>
 </head>
 
 <body>

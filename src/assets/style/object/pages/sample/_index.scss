@@ -1,6 +1,0 @@
-@use "../../../foundation/index" as f;
-
-.p-sample {
-    @include f.breakpoint(sp) {
-    }
-}

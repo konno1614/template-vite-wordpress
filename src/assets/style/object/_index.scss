@@ -7,8 +7,9 @@
 @use "./component/pager";
 
 @use "./pages/index/index" as indexPage;
-@use "./pages/sample/index" as samplePage;
 @use "./pages/news/index" as newsPage;
+@use "./pages/custom-post-sample/index" as customPostSamplePage;
 @use "./pages/contact/index" as contactPage;
+@use "./pages/search/index" as searchPage;
 
 @use "./utility/display";

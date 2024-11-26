@@ -1,166 +1,93 @@
 <?php
-/*--------------------------------------------------------------*/
-/* カスタム投稿タイプ */
-/*--------------------------------------------------------------*/
-add_action('init', 'create_post_type');
-function create_post_type()
+function create_custom_post_type_and_taxonomies()
 {
-    // 商品(product)のカスタム投稿タイプ
-    register_post_type(
-        'product', //カスタム投稿タイプ名を指定
-        array(
-            'labels' => array(
-                'name' => __('商品一覧'),
-                'singular_name' => __('商品'),
-                'add_new' => __('新規商品', 'book'),
-                'add_new_item' => __('新規商品を追加'),
-                'edit_item' => __('商品を編集する'),
-                'new_item' => __('新しい商品'),
-                'view_item' => __('商品を表示する'),
-                'search_items' => __('商品を検索'),
-                'not_found' =>  __('商品はありません'),
-                'not_found_in_trash' => __('ゴミ箱に商品はありません'),
-                'parent_item_colon' => ''
-            ),
-            'public' => true,
-            'hierarchical' => true,
-            'has_archive' => true, /* アーカイブページを持つ */
-            'menu_icon' => 'dashicons-tag',
-            'supports' => array('title', 'editor', 'thumbnail')
-        )
-    );
-    register_taxonomy(
-        'product-cat', /* タクソノミーの名前 */
-        'product', /* 使用するカスタム投稿タイプ名 */
-        array(
-            'hierarchical' => true, /* trueだと親子関係が使用可能。falseで使用不可 */
-            'update_count_callback' => '_update_post_term_count',
-            'label' => '商品-カテゴリー',
-            'singular_label' => '商品-カテゴリー',
-            'has_archive' => true, /* アーカイブページを持つ */
-            'public' => true,
-            'show_ui' => true
-        )
-    );
+    // カスタム投稿タイプの登録
+    register_post_type('custom-post-sample', array(
+        'labels' => array(
+            'name' => __('カスタム投稿サンプル一覧'),
+            'singular_name' => __('カスタム投稿サンプル'),
+            'add_new' => __('新規カスタム投稿サンプル', 'book'),
+            'add_new_item' => __('新規カスタム投稿サンプルを追加'),
+            'edit_item' => __('カスタム投稿サンプルを編集する'),
+            'new_item' => __('新しいカスタム投稿サンプル'),
+            'view_item' => __('カスタム投稿サンプルを表示する'),
+            'search_items' => __('カスタム投稿サンプルを検索'),
+            'not_found' => __('カスタム投稿サンプルはありません'),
+            'not_found_in_trash' => __('ゴミ箱にカスタム投稿サンプルはありません'),
+            'parent_item_colon' => ''
+        ),
+        'public' => true,
+        'hierarchical' => true,
+        'has_archive' => true, // アーカイブページを持つ
+        'rewrite' => array('slug' => 'custom-post-sample'),
+        'supports' => array('title', 'editor', 'thumbnail'),
+        'menu_icon' => 'dashicons-tag',
+        'taxonomies' => array('custom-post-sample-category', 'custom-post-sample-tag') // カスタムタクソノミーを指定
+    ));
 
-    // WEB制作(web)のカスタム投稿タイプ
-    register_post_type(
-        'web', //カスタム投稿タイプ名を指定
-        array(
-            'labels' => array(
-                'name' => __('WEB制作一覧'),
-                'singular_name' => __('WEB制作'),
-                'add_new' => __('新規WEB制作', 'book'),
-                'add_new_item' => __('新規WEB制作を追加'),
-                'edit_item' => __('WEB制作を編集する'),
-                'new_item' => __('新しいWEB制作'),
-                'view_item' => __('WEB制作を表示する'),
-                'search_items' => __('WEB制作を検索'),
-                'not_found' =>  __('WEB制作はありません'),
-                'not_found_in_trash' => __('ゴミ箱にWEB制作はありません'),
-                'parent_item_colon' => ''
-            ),
-            'public' => true,
-            'hierarchical' => true,
-            'has_archive' => true, /* アーカイブページを持つ */
-            'menu_icon' => 'dashicons-tag',
-            'supports' => array('title', 'editor', 'thumbnail')
-        )
-    );
-    register_taxonomy(
-        'web-cat', /* タクソノミーの名前 */
-        'web', /* 使用するカスタム投稿タイプ名 */
-        array(
-            'hierarchical' => true, /* trueだと親子関係が使用可能。falseで使用不可 */
-            'update_count_callback' => '_update_post_term_count',
-            'label' => 'WEB制作-カテゴリー',
-            'singular_label' => 'WEB制作-カテゴリー',
-            'has_archive' => true, /* アーカイブページを持つ */
-            'public' => true,
-            'show_ui' => true
-        )
-    );
+    // カスタムタクソノミーの登録（カテゴリー）
+    register_taxonomy('custom-post-sample-category', 'custom-post-sample', array(
+        'hierarchical' => true, // trueだと親子関係が使用可能。falseで使用不可
+        'update_count_callback' => '_update_post_term_count',
+        'labels' => array(
+            'name' => 'カスタム投稿サンプル-カテゴリー',
+            'singular_name' => 'カスタム投稿サンプル-カテゴリー',
+            'search_items' => __('カテゴリーを検索'),
+            'all_items' => __('すべてのカテゴリー'),
+            'parent_item' => __('親カテゴリー'),
+            'parent_item_colon' => __('親カテゴリー:'),
+            'edit_item' => __('カテゴリーを編集'),
+            'update_item' => __('カテゴリーを更新'),
+            'add_new_item' => __('新規カテゴリーを追加'),
+            'new_item_name' => __('新しいカテゴリー名'),
+            'menu_name' => __('カテゴリー')
+        ),
+        'rewrite' => array('slug' => 'custom-post-sample-category'),
+        'show_admin_column' => true,
+        'show_in_rest' => true,
+    ));
+
+    // カスタムタクソノミーの登録（タグ）
+    register_taxonomy('custom-post-sample-tag', 'custom-post-sample', array(
+        'hierarchical' => false, // タグは階層構造を持たない
+        'update_count_callback' => '_update_post_term_count',
+        'labels' => array(
+            'name' => 'カスタム投稿サンプル-タグ',
+            'singular_name' => 'カスタム投稿サンプル-タグ',
+            'search_items' => __('タグを検索'),
+            'all_items' => __('すべてのタグ'),
+            'edit_item' => __('タグを編集'),
+            'update_item' => __('タグを更新'),
+            'add_new_item' => __('新規タグを追加'),
+            'new_item_name' => __('新しいタグ名'),
+            'menu_name' => __('タグ')
+        ),
+        'rewrite' => array('slug' => 'custom-post-sample-tag'),
+        'show_admin_column' => true,
+        'show_in_rest' => true,
+    ));
 }
+add_action('init', 'create_custom_post_type_and_taxonomies');
 
 
-
-// ターム説明文からpとbr排除
-remove_filter('term_description', 'wpautop');
-
-
-
-// 商品の新規追加カテゴリー削除
-function my_admin_style()
+// 一覧ページに表示する投稿数
+function modify_custom_posts_per_page($query)
 {
-    echo '<style>
-    ul#product-cat-tabs,
-    div#product-cat-adder
-    {
-    display:none;
+    if (!is_admin() && $query->is_main_query() && $query->is_post_type_archive('custom-post-sample')) {
+        $query->set('posts_per_page', -1);
     }
-    </style>' . PHP_EOL;
 }
-add_action('admin_print_styles', 'my_admin_style');
+add_action('pre_get_posts', 'modify_custom_posts_per_page');
 
 
-
-// 投稿 カテゴリーのチェックボックスをラジオボタンに
-add_action('admin_print_footer_scripts', 'select_one_category');
-function select_one_category()
-{
-?>
-    <script type="text/javascript">
-        jQuery(function($) {
-
-            // 投稿画面
-            $('#taxonomy-category input[type=checkbox]').each(function() {
-                $(this).replaceWith($(this).clone().attr('type', 'radio'));
-            });
-            // 一覧画面
-            var category_type_checklist = $('#category-all .categorychecklist input[type=checkbox]');
-            category_type_checklist.click(function() {
-                $(this).parents('#category-all .categorychecklist').find(' input[type=checkbox]').attr('checked', false);
-                $(this).attr('checked', true);
-            });
-        });
-    </script>
-<?php
-}
-
-
-
-// カスタム投稿タクソノミー カテゴリーのチェックボックスをラジオボタンに
-add_action('admin_print_footer_scripts', 'select_to_radio_product');
-function select_to_radio_product()
-{
-?>
-    <script type="text/javascript">
-        jQuery(function($) {
-            // 投稿画面
-            $('#taxonomy-product-cat input[type=checkbox]').each(function() {
-                $(this).replaceWith($(this).clone().attr('type', 'radio'));
-            });
-            // 一覧画面
-            var productcat_checklist = $('.product-cat-checklist input[type=checkbox]');
-            productcat_checklist.click(function() {
-                $(this).parents('.product-cat-checklist').find(' input[type=checkbox]').attr('checked', false);
-                $(this).attr('checked', true);
-            });
-        });
-    </script>
-<?php
-}
-
-
-
-// 投稿_カスタム投稿ごとの管理画面のアイキャッチに説明文を追加
+// 投稿&カスタム投稿ごとの管理画面のアイキャッチに説明文を追加
 add_filter('admin_post_thumbnail_html', 'add_featured_image_instruction');
 function add_featured_image_instruction($content)
 {
     $screen = get_current_screen();
-    if ($screen->post_type == '_post') { //投稿
+    if ($screen->post_type == '_post') { // 通常投稿
         $content .= '<p>推奨サイズ：横900px x 縦600px</p>';
-    } elseif ($screen->post_type == 'product') { //カスタム投稿
+    } elseif ($screen->post_type == 'custom-post-sample') { // カスタム投稿
         $content .= '<p>推奨サイズ：横900px x 縦900px</p>';
     }
     return $content;

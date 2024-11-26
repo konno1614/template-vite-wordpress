@@ -1,6 +1,28 @@
 @use "../../foundation/index" as f;
 
 .c-prevnext {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     @include f.breakpoint(sp) {
+    }
+    li {
+        flex-basis: calc(100% / 3);
+        a {
+            display: block;
+            background-color: f.$c-main;
+            padding: 1em;
+            border-radius: 100vh;
+        }
+    }
+    .prev {
+        text-align: right;
+    }
+    .index {
+        text-align: center;
+        margin: 0 1em;
+    }
+    .next {
+        text-align: left;
     }
 }
