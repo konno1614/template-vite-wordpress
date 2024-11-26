@@ -5,7 +5,7 @@
 <div class="p-custom-post-sample p-custom-post-sample-single">
     <div class="l-inner">
         <article class="p-custom-post-sample-single__contents">
-            <h2 class="p-custom-post-sample-single__title">投稿</h2>
+            <h2 class="c-title">投稿</h2>
             <?php if (have_posts()) : ?>
                 <?php while (have_posts()): the_post();
                     // ACFのカスタムフィールドの値を取得
@@ -61,7 +61,7 @@
             </div>
         </article>
         <section class="p-custom-post-sample-single__related">
-            <h2 class="p-custom-post-sample-single__title">関連する投稿</h2>
+            <h2 class="c-title">関連する投稿</h2>
             <?php
             $categories = wp_get_post_terms(get_the_ID(), 'custom-post-sample-cat', array('fields' => 'ids'));
             $tags = wp_get_post_terms(get_the_ID(), 'custom-post-sample-tag', array('fields' => 'ids'));

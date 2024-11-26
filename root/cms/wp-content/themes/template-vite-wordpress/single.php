@@ -5,7 +5,7 @@
 <div class="p-news p-news-single">
     <div class="l-inner">
         <article class="p-news-single__contents">
-            <h2 class="p-news-single__title">投稿</h2>
+            <h2 class="c-title">投稿</h2>
             <?php if (have_posts()): ?>
                 <?php while (have_posts()): the_post(); ?>
                     <div class="p-news-single__head">
@@ -55,7 +55,7 @@
             </div>
         </article>
         <section class="p-news-single__related">
-            <h2 class="p-news-single__title">関連する投稿</h2>
+            <h2 class="c-title">関連する投稿</h2>
             <?php
             $categories = wp_get_post_categories(get_the_ID());
             $tags = wp_get_post_tags(get_the_ID(), array('fields' => 'ids'));

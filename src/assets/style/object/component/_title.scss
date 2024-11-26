@@ -1,6 +1,13 @@
 @use "../../foundation/index" as f;
 
 .c-title {
+    font-size: f.clamp-vw(30, 40, 320, 1440);
+    line-height: calc(60 / 40);
+    letter-spacing: calc(75em / 1000);
+    text-align: center;
+    font-weight: 700;
+    color: f.$c-accent;
+    margin-block-end: calc(40px + var(--leading-trim));
     @include f.breakpoint(sp) {
     }
 }

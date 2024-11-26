@@ -4,7 +4,7 @@
 
 <div class="p-search">
     <div class="l-inner">
-        <h2 class="p-search__title"><?php the_search_query() ?>の検索結果</h2>
+        <h2 class="c-title"><?php the_search_query() ?>の検索結果</h2>
         <div class="p-search__contents">
             <?php if (have_posts()): ?>
                 <ul class="p-search__list">

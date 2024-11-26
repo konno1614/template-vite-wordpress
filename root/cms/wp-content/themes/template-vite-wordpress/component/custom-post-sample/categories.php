@@ -1,5 +1,5 @@
 <div class="p-custom-post-sample__categories">
-    <ul class="c-grid">
+    <ul>
         <li <?php if (is_post_type_archive("custom-post-sample")): ?> class="current" <?php endif; ?>>
             <a href="<?php echo esc_url(home_url('/')); ?>custom-post-sample/">
                 <p>すべて</p>

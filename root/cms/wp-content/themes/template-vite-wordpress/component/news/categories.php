@@ -1,5 +1,5 @@
 <div class="p-news__categories">
-    <ul class="c-grid">
+    <ul>
         <li class="<?php echo is_category() ? '' : 'all'; ?>">
             <a href="<?php echo esc_url(home_url('/')); ?>news/">すべて</a>
         </li>

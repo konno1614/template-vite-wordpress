@@ -4,7 +4,7 @@
 
 <div class="p-custom-post-sample">
     <div class="l-inner">
-        <h2 class="p-custom-post-sample__title">「<?php single_cat_title(); ?>」のタグが付いた投稿</h2>
+        <h2 class="c-title">「<?php single_cat_title(); ?>」のタグが付いた投稿</h2>
         <?php get_template_part('component/custom-post-sample/contents'); ?>
         <?php get_template_part('component/custom-post-sample/back'); ?>
     </div>

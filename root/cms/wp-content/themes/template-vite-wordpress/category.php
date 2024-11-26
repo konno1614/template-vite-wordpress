@@ -4,7 +4,7 @@
 
 <div class="p-news">
     <div class="l-inner">
-        <h2 class="p-news__title">「<?php single_cat_title(); ?>」のカテゴリーが付いた投稿</h2>
+        <h2 class="c-title">「<?php single_cat_title(); ?>」のカテゴリーが付いた投稿</h2>
         <?php get_template_part('component/news/contents'); ?>
         <?php get_template_part('component/news/back'); ?>
     </div>
