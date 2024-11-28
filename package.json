@@ -6,7 +6,7 @@
     "license": "MIT",
     "type": "module",
     "dependencies": {
-        "@wordpress/env": "10.12.0"
+        "@wordpress/env": "10.13.0"
     },
     "scripts": {
         "start": "npm-run-all wp-start wp-import docker-start dev",
@@ -47,7 +47,7 @@
         "rimraf": "^6.0.1",
         "sass": "1.81.0",
         "sharp": "^0.33.5",
-        "vite": "^5.4.11"
+        "vite": "^6.0.1"
     },
     "browserslist": [
         "last 2 version",

@@ -2,10 +2,10 @@
 # yarn lockfile v1
 
 
-"@esbuild/darwin-arm64@0.21.5":
-  version "0.21.5"
-  resolved "https://registry.npmjs.org/@esbuild/darwin-arm64/-/darwin-arm64-0.21.5.tgz"
-  integrity sha512-DwqXqZyuk5AiWWf3UfLiRDJ5EDd49zg6O9wclZ7kUMv2WRFr4HKjXp/5t8JZ11QbQfUS6/cRCKGwYhtNAY88kQ==
+"@esbuild/darwin-arm64@0.24.0":
+  version "0.24.0"
+  resolved "https://registry.npmjs.org/@esbuild/darwin-arm64/-/darwin-arm64-0.24.0.tgz"
+  integrity sha512-CKyDpRbK1hXwv79soeTJNHb5EiG6ct3efd/FTPdzOWdbZZfGhpbcqIpiD0+vwmpu0wTIL97ZRPZu8vUt46nBSw==
 
 "@img/sharp-darwin-arm64@0.33.5":
   version "0.33.5"
@@ -72,10 +72,10 @@
     "@parcel/watcher-win32-ia32" "2.5.0"
     "@parcel/watcher-win32-x64" "2.5.0"
 
-"@rollup/rollup-darwin-arm64@4.24.2":
-  version "4.24.2"
-  resolved "https://registry.npmjs.org/@rollup/rollup-darwin-arm64/-/rollup-darwin-arm64-4.24.2.tgz"
-  integrity sha512-/UhrIxobHYCBfhi5paTkUDQ0w+jckjRZDZ1kcBL132WeHZQ6+S5v9jQPVGLVrLbNUebdIRpIt00lQ+4Z7ys4Rg==
+"@rollup/rollup-darwin-arm64@4.27.4":
+  version "4.27.4"
+  resolved "https://registry.npmjs.org/@rollup/rollup-darwin-arm64/-/rollup-darwin-arm64-4.27.4.tgz"
+  integrity sha512-PlNiRQapift4LNS8DPUHuDX/IdXiLjf8mc5vdEmUR0fF/pyy2qWwzdLjB+iZquGr8LuN4LnUoSEvKRwjSVYz3Q==
 
 "@sindresorhus/is@^4.0.0":
   version "4.6.0"
@@ -116,7 +116,7 @@
   dependencies:
     "@types/node" "*"
 
-"@types/node@*", "@types/node@^18.0.0 || >=20.0.0":
+"@types/node@*", "@types/node@^18.0.0 || ^20.0.0 || >=22.0.0":
   version "20.11.10"
   resolved "https://registry.npmjs.org/@types/node/-/node-20.11.10.tgz"
   integrity sha512-rZEfe/hJSGYmdfX9tvcPMYeYPW2sNl50nsw4jZmRcaG0HIAb0WYEpsB05GOb53vjqpyE9GUhlDQ4jLSoB5q9kg==
@@ -130,10 +130,10 @@
   dependencies:
     "@types/node" "*"
 
-"@wordpress/env@10.12.0":
-  version "10.12.0"
-  resolved "https://registry.npmjs.org/@wordpress/env/-/env-10.12.0.tgz"
-  integrity sha512-+tsdVfngQYcysxdVonXRSwuJjqoqTSv7wwrcThCYXR1OBCMQ/xT2Ywfvf9a/yItJs5uicO9Vx8B5aIuvXiGVqg==
+"@wordpress/env@10.13.0":
+  version "10.13.0"
+  resolved "https://registry.npmjs.org/@wordpress/env/-/env-10.13.0.tgz"
+  integrity sha512-Q7ay+/jZ+O/Pkc65LDJ5BzoqTT/B0+gDgvYnWMyySPiMpFz+iQ+XoQibrj3VneiQDH7nJjtk/ZuyPHu7wGdlBg==
   dependencies:
     chalk "^4.0.0"
     copy-dir "^1.3.0"
@@ -722,34 +722,35 @@ es-to-primitive@^1.2.1:
     is-date-object "^1.0.1"
     is-symbol "^1.0.2"
 
-esbuild@^0.21.3:
-  version "0.21.5"
-  resolved "https://registry.npmjs.org/esbuild/-/esbuild-0.21.5.tgz"
-  integrity sha512-mg3OPMV4hXywwpoDxu3Qda5xCKQi+vCTZq8S9J/EpkhB2HzKXq4SNFZE3+NK93JYxc8VMSep+lOUSC/RVKaBqw==
+esbuild@^0.24.0:
+  version "0.24.0"
+  resolved "https://registry.npmjs.org/esbuild/-/esbuild-0.24.0.tgz"
+  integrity sha512-FuLPevChGDshgSicjisSooU0cemp/sGXR841D5LHMB7mTVOmsEHcAxaH3irL53+8YDIeVNQEySh4DaYU/iuPqQ==
   optionalDependencies:
-    "@esbuild/aix-ppc64" "0.21.5"
-    "@esbuild/android-arm" "0.21.5"
-    "@esbuild/android-arm64" "0.21.5"
-    "@esbuild/android-x64" "0.21.5"
-    "@esbuild/darwin-arm64" "0.21.5"
-    "@esbuild/darwin-x64" "0.21.5"
-    "@esbuild/freebsd-arm64" "0.21.5"
-    "@esbuild/freebsd-x64" "0.21.5"
-    "@esbuild/linux-arm" "0.21.5"
-    "@esbuild/linux-arm64" "0.21.5"
-    "@esbuild/linux-ia32" "0.21.5"
-    "@esbuild/linux-loong64" "0.21.5"
-    "@esbuild/linux-mips64el" "0.21.5"
-    "@esbuild/linux-ppc64" "0.21.5"
-    "@esbuild/linux-riscv64" "0.21.5"
-    "@esbuild/linux-s390x" "0.21.5"
-    "@esbuild/linux-x64" "0.21.5"
-    "@esbuild/netbsd-x64" "0.21.5"
-    "@esbuild/openbsd-x64" "0.21.5"
-    "@esbuild/sunos-x64" "0.21.5"
-    "@esbuild/win32-arm64" "0.21.5"
-    "@esbuild/win32-ia32" "0.21.5"
-    "@esbuild/win32-x64" "0.21.5"
+    "@esbuild/aix-ppc64" "0.24.0"
+    "@esbuild/android-arm" "0.24.0"
+    "@esbuild/android-arm64" "0.24.0"
+    "@esbuild/android-x64" "0.24.0"
+    "@esbuild/darwin-arm64" "0.24.0"
+    "@esbuild/darwin-x64" "0.24.0"
+    "@esbuild/freebsd-arm64" "0.24.0"
+    "@esbuild/freebsd-x64" "0.24.0"
+    "@esbuild/linux-arm" "0.24.0"
+    "@esbuild/linux-arm64" "0.24.0"
+    "@esbuild/linux-ia32" "0.24.0"
+    "@esbuild/linux-loong64" "0.24.0"
+    "@esbuild/linux-mips64el" "0.24.0"
+    "@esbuild/linux-ppc64" "0.24.0"
+    "@esbuild/linux-riscv64" "0.24.0"
+    "@esbuild/linux-s390x" "0.24.0"
+    "@esbuild/linux-x64" "0.24.0"
+    "@esbuild/netbsd-x64" "0.24.0"
+    "@esbuild/openbsd-arm64" "0.24.0"
+    "@esbuild/openbsd-x64" "0.24.0"
+    "@esbuild/sunos-x64" "0.24.0"
+    "@esbuild/win32-arm64" "0.24.0"
+    "@esbuild/win32-ia32" "0.24.0"
+    "@esbuild/win32-x64" "0.24.0"
 
 escalade@^3.1.1, escalade@^3.2.0:
   version "3.2.0"
@@ -846,11 +847,6 @@ fs.realpath@^1.0.0:
   version "1.0.0"
   resolved "https://registry.npmjs.org/fs.realpath/-/fs.realpath-1.0.0.tgz"
   integrity sha512-OO0pH2lK6a0hZnAdau5ItzHPI6pUlvI7jMVnxUQRtw4owF2wk8lOSabtGDCTP4Ggrg2MbGnWO9X8K1t4+fGMDw==
-
-fsevents@~2.3.2, fsevents@~2.3.3:
-  version "2.3.3"
-  resolved "https://registry.npmjs.org/fsevents/-/fsevents-2.3.3.tgz"
-  integrity sha512-5xoDfX+fL7faATnagmWPpbFtwh/R77WmMMqqHGS65C3vvB0YHrgF+B1YmZ3441tMj5n63k0212XNoJwzlhffQw==
 
 function-bind@^1.1.2:
   version "1.1.2"
@@ -1621,7 +1617,7 @@ postcss-value-parser@^4.2.0:
   resolved "https://registry.npmjs.org/postcss-value-parser/-/postcss-value-parser-4.2.0.tgz"
   integrity sha512-1NNCs6uurfkVbeXG4S8JFT9t19m45ICnif8zWLd5oPSZ50QnwMfK+H3jv408d4jw/7Bttv5axS5IiHoLaVNHeQ==
 
-postcss@^8.0.9, postcss@^8.1.0, postcss@^8.4.23, postcss@^8.4.31, postcss@^8.4.43, postcss@^8.4.49:
+postcss@^8.0.9, postcss@^8.1.0, postcss@^8.4.23, postcss@^8.4.31, postcss@^8.4.49:
   version "8.4.49"
   resolved "https://registry.npmjs.org/postcss/-/postcss-8.4.49.tgz"
   integrity sha512-OCVPnIObs4N29kxTjzLfUryOkvZEq+pf8jTF0lg8E7uETuWHA+v7j3c/xJmiqpX450191LlmZfUKkXxkTry7nA==
@@ -1734,31 +1730,31 @@ rimraf@^6.0.1:
     glob "^11.0.0"
     package-json-from-dist "^1.0.0"
 
-rollup@^4.20.0:
-  version "4.24.2"
-  resolved "https://registry.npmjs.org/rollup/-/rollup-4.24.2.tgz"
-  integrity sha512-do/DFGq5g6rdDhdpPq5qb2ecoczeK6y+2UAjdJ5trjQJj5f1AiVdLRWRc9A9/fFukfvJRgM0UXzxBIYMovm5ww==
+rollup@^4.23.0:
+  version "4.27.4"
+  resolved "https://registry.npmjs.org/rollup/-/rollup-4.27.4.tgz"
+  integrity sha512-RLKxqHEMjh/RGLsDxAEsaLO3mWgyoU6x9w6n1ikAzet4B3gI2/3yP6PWY2p9QzRTh6MfEIXB3MwsOY0Iv3vNrw==
   dependencies:
     "@types/estree" "1.0.6"
   optionalDependencies:
-    "@rollup/rollup-android-arm-eabi" "4.24.2"
-    "@rollup/rollup-android-arm64" "4.24.2"
-    "@rollup/rollup-darwin-arm64" "4.24.2"
-    "@rollup/rollup-darwin-x64" "4.24.2"
-    "@rollup/rollup-freebsd-arm64" "4.24.2"
-    "@rollup/rollup-freebsd-x64" "4.24.2"
-    "@rollup/rollup-linux-arm-gnueabihf" "4.24.2"
-    "@rollup/rollup-linux-arm-musleabihf" "4.24.2"
-    "@rollup/rollup-linux-arm64-gnu" "4.24.2"
-    "@rollup/rollup-linux-arm64-musl" "4.24.2"
-    "@rollup/rollup-linux-powerpc64le-gnu" "4.24.2"
-    "@rollup/rollup-linux-riscv64-gnu" "4.24.2"
-    "@rollup/rollup-linux-s390x-gnu" "4.24.2"
-    "@rollup/rollup-linux-x64-gnu" "4.24.2"
-    "@rollup/rollup-linux-x64-musl" "4.24.2"
-    "@rollup/rollup-win32-arm64-msvc" "4.24.2"
-    "@rollup/rollup-win32-ia32-msvc" "4.24.2"
-    "@rollup/rollup-win32-x64-msvc" "4.24.2"
+    "@rollup/rollup-android-arm-eabi" "4.27.4"
+    "@rollup/rollup-android-arm64" "4.27.4"
+    "@rollup/rollup-darwin-arm64" "4.27.4"
+    "@rollup/rollup-darwin-x64" "4.27.4"
+    "@rollup/rollup-freebsd-arm64" "4.27.4"
+    "@rollup/rollup-freebsd-x64" "4.27.4"
+    "@rollup/rollup-linux-arm-gnueabihf" "4.27.4"
+    "@rollup/rollup-linux-arm-musleabihf" "4.27.4"
+    "@rollup/rollup-linux-arm64-gnu" "4.27.4"
+    "@rollup/rollup-linux-arm64-musl" "4.27.4"
+    "@rollup/rollup-linux-powerpc64le-gnu" "4.27.4"
+    "@rollup/rollup-linux-riscv64-gnu" "4.27.4"
+    "@rollup/rollup-linux-s390x-gnu" "4.27.4"
+    "@rollup/rollup-linux-x64-gnu" "4.27.4"
+    "@rollup/rollup-linux-x64-musl" "4.27.4"
+    "@rollup/rollup-win32-arm64-msvc" "4.27.4"
+    "@rollup/rollup-win32-ia32-msvc" "4.27.4"
+    "@rollup/rollup-win32-x64-msvc" "4.27.4"
     fsevents "~2.3.2"
 
 run-async@^2.4.0:
@@ -2241,14 +2237,14 @@ validate-npm-package-license@^3.0.1:
     spdx-correct "^3.0.0"
     spdx-expression-parse "^3.0.0"
 
-vite@^5.4.11:
-  version "5.4.11"
-  resolved "https://registry.npmjs.org/vite/-/vite-5.4.11.tgz"
-  integrity sha512-c7jFQRklXua0mTzneGW9QVyxFjUgwcihC4bXEtujIo2ouWCe1Ajt/amn2PCxYnhYfd5k09JX3SB7OYWFKYqj8Q==
+vite@^6.0.1:
+  version "6.0.1"
+  resolved "https://registry.npmjs.org/vite/-/vite-6.0.1.tgz"
+  integrity sha512-Ldn6gorLGr4mCdFnmeAOLweJxZ34HjKnDm4HGo6P66IEqTxQb36VEdFJQENKxWjupNfoIjvRUnswjn1hpYEpjQ==
   dependencies:
-    esbuild "^0.21.3"
-    postcss "^8.4.43"
-    rollup "^4.20.0"
+    esbuild "^0.24.0"
+    postcss "^8.4.49"
+    rollup "^4.23.0"
   optionalDependencies:
     fsevents "~2.3.3"
 
@@ -2332,7 +2328,7 @@ y18n@^5.0.5:
   resolved "https://registry.npmjs.org/y18n/-/y18n-5.0.8.tgz"
   integrity sha512-0pfFzegeDWJHJIAmTLRP2DwHjdF5s7jo9tuztdQxAhINCdvS+3nGINqPd00AphqJR/0LhANUS6/+7SCb98YOfA==
 
-yaml@^2.2.2:
+yaml@^2.2.2, yaml@^2.4.2:
   version "2.6.0"
   resolved "https://registry.npmjs.org/yaml/-/yaml-2.6.0.tgz"
   integrity sha512-a6ae//JvKDEra2kdi1qzCyrJW/WZCgFi8ydDV+eXExl95t+5R+ijnqHJbz9tmMh8FUjx3iv2fCQ4dclAQlO2UQ==
