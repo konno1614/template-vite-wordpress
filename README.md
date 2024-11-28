@@ -322,8 +322,9 @@ ncu -u
 
 ```
 rm -rf node_modules
+rm -f package-lock.json
 ```
-▲node_modulesを削除
+▲node_modulesとpackage-lock.jsonを削除
 
 ```
 npm install

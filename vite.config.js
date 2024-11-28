@@ -40,7 +40,7 @@ const getRollupOptions = (mode) => ({
         entryFileNames: "assets/js/[name].js",
         chunkFileNames: "assets/js/[name].js",
         assetFileNames: (assetsInfo) => {
-            if (/\.(gif|jpeg|jpg|png|svg|webp)$/.test(assetsInfo.name)) {
+            if (/\.(gif|jpeg|jpg|png|svg|webp|avif)$/.test(assetsInfo.name)) {
                 return 'assets/images/[name].[ext]';
             } else if (assetsInfo.name === "style.css") {
                 return "assets/style/[name].[ext]";
