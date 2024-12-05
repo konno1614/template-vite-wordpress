@@ -1,6 +1,0 @@
-{
-    "icons": [
-        { "src": "/assets/img/common/icon-192.webp", "type": "image/webp", "sizes": "192x192" },
-        { "src": "/assets/img/common/icon-512.webp", "type": "image/webp", "sizes": "512x512" }
-    ]
-}
