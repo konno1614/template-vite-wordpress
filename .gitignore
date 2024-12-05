@@ -29,6 +29,6 @@ _
 
 # theme
 root/cms/wp-content/*
-!root/cms/wp-content/themes/*
+!root/cms/wp-content/themes/template-vite-wordpress
 !root/cms/wp-content/plugins/advanced-custom-fields-pro
 !root/cms/wp-content/uploads/backup.sql
