@@ -31,5 +31,5 @@ _
 root/cms/wp-content/plugins/*
 !root/cms/wp-content/plugins/advanced-custom-fields-pro
 
-root/cms/wp-content/uploads/*
-!root/cms/wp-content/uploads/backup.sql
+# root/cms/wp-content/uploads/*
+# !root/cms/wp-content/uploads/backup.sql
