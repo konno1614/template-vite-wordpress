@@ -27,6 +27,9 @@ dist-ssr
 .husky/.gitignore
 _
 
-# theme
-root/cms/wp-content/themes/*
-!root/cms/wp-content/themes/template-vite-wordpress
+# wp-content
+root/cms/wp-content/plugins/*
+!root/cms/wp-content/plugins/advanced-custom-fields-pro
+
+# root/cms/wp-content/uploads/*
+# !root/cms/wp-content/uploads/backup.sql

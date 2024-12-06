@@ -2,13 +2,14 @@
 <!DOCTYPE html>
 <html lang="ja">
 
-<head>
+<head prefix="og:http://ogp.me/ns#">
     <?php
     if (WP_DEBUG) {
         $root = "http://localhost:1024";
         $css_ext = "scss";
         $js_ext = "ts";
         echo '<script type="module" src="http://localhost:1024/@vite/client"></script>';
+        echo '<script>console.log("Debug");</script>';
     } else {
         $root = get_template_directory_uri();
         $css_ext = "css";
@@ -32,11 +33,11 @@
     <meta property="og:type" content="website" />
     <meta property="og:title" content="<?php echo wp_get_document_title(); ?>" />
     <meta property="og:description" content="<?php bloginfo('description'); ?>" />
-    <meta property="og:image" content="<?php echo get_template_directory_uri(); ?>/assets/images/common/ogp.png" />
+    <meta property="og:image" content="<?php echo get_template_directory_uri(); ?>/assets/images/common/ogp.wepb" />
     <meta property="og:locale" content="ja_JP" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:description" content="<?php bloginfo('description'); ?>" />
-    <meta name="twitter:image:src" content="<?php echo get_template_directory_uri(); ?>/assets/images/common/ogp.png" />
+    <meta name="twitter:image:src" content="<?php echo get_template_directory_uri(); ?>/assets/images/common/ogp.wepb" />
     <!-- font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>

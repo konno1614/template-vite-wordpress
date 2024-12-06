@@ -30,8 +30,6 @@
 - [ ] phpMyAdmin画面の`wp_options`から、`siteurl`と`home`を適切なものに更新
 - [ ] root/.htaccessを更新・手動アップロード
 - [ ] root/index.phpを更新・手動アップロード
-- [ ] root/sitemap.xmlを更新・手動アップロード
-- [ ] root/robots.txtを更新・手動アップロード
 - [ ] root/cms/wp-config.phpを更新・手動アップロード
 
 ## 利用ツール
@@ -322,8 +320,9 @@ ncu -u
 
 ```
 rm -rf node_modules
+rm -f package-lock.json
 ```
-▲node_modulesを削除
+▲node_modulesとpackage-lock.jsonを削除
 
 ```
 npm install

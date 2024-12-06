@@ -13,12 +13,6 @@
             <?php else : ?>
             <?php endif; ?>
         </section>
-        <section class="p-contact__section">
-            <h2 class="p-contact__title">Google Form</h2>
-            <div class="p-contact__google-form">
-                <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScqcLiiJ_0e37qoXjn504lbLgMjT29HSBynYQVMIF_gDLqFjg/viewform?embedded=true" width="640" height="416" frameborder="0" marginheight="0" marginwidth="0">読み込んでいます…</iframe>
-            </div>
-        </section>
     </div>
 </div>
 
