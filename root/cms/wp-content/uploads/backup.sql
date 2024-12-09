@@ -412,7 +412,7 @@ INSERT INTO `wp_options` VALUES
 (119,'widget_tag_cloud','a:1:{s:12:\"_multiwidget\";i:1;}','auto'),
 (120,'widget_nav_menu','a:1:{s:12:\"_multiwidget\";i:1;}','auto'),
 (121,'widget_custom_html','a:1:{s:12:\"_multiwidget\";i:1;}','auto'),
-(124,'_transient_doing_cron','1733712751.4189710617065429687500','on'),
+(124,'_transient_doing_cron','1733713507.5726790428161621093750','on'),
 (149,'theme_mods_twentytwentyfour','a:1:{s:16:\"sidebars_widgets\";a:2:{s:4:\"time\";i:1730263165;s:4:\"data\";a:3:{s:19:\"wp_inactive_widgets\";a:0:{}s:9:\"sidebar-1\";a:3:{i:0;s:7:\"block-2\";i:1;s:7:\"block-3\";i:2;s:7:\"block-4\";}s:9:\"sidebar-2\";a:2:{i:0;s:7:\"block-5\";i:1;s:7:\"block-6\";}}}}','off'),
 (150,'current_theme','template-vite-wordpress','auto'),
 (151,'theme_mods_template-vite-wordpress','a:3:{i:0;b:0;s:18:\"nav_menu_locations\";a:0:{}s:18:\"custom_css_post_id\";i:-1;}','on'),
@@ -486,7 +486,7 @@ INSERT INTO `wp_options` VALUES
 (411,'wp_mail_smtp_activated','a:1:{s:4:\"lite\";i:1731918844;}','auto'),
 (412,'_transient_timeout_wp_mail_smtp_just_activated','1731918904','off'),
 (413,'_transient_wp_mail_smtp_just_activated','1','off'),
-(416,'action_scheduler_lock_async-request-runner','67565b2a867e72.45075335|1733712742','no'),
+(416,'action_scheduler_lock_async-request-runner','67565e638d58d0.93418693|1733713567','no'),
 (419,'wp_mail_smtp_migration_version','5','on'),
 (420,'wp_mail_smtp_debug_events_db_version','1','on'),
 (423,'wp_mail_smtp_review_notice','a:2:{s:4:\"time\";i:1733380991;s:9:\"dismissed\";b:1;}','auto'),
@@ -1027,7 +1027,7 @@ INSERT INTO `wp_usermeta` VALUES
 (13,1,'wp_user_level','10'),
 (14,1,'dismissed_wp_pointers',''),
 (15,1,'show_welcome_panel','0'),
-(16,1,'session_tokens','a:7:{s:64:\"1e0160b7a359b71e56a0aec1b098c79cae8df18e268aed37d5054b0c109493a5\";a:4:{s:10:\"expiration\";i:1733553778;s:2:\"ip\";s:10:\"172.18.0.1\";s:2:\"ua\";s:117:\"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36\";s:5:\"login\";i:1733380978;}s:64:\"e21619b7020100873e12732153eda406ec6e4334288dce5baa2b9ca9a513fd03\";a:4:{s:10:\"expiration\";i:1733555526;s:2:\"ip\";s:10:\"172.18.0.1\";s:2:\"ua\";s:117:\"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36\";s:5:\"login\";i:1733382726;}s:64:\"49122b44c7eea7d2b4eb417df43320feae9b21d04cfbfa53641f4040a76f72e0\";a:4:{s:10:\"expiration\";i:1733556065;s:2:\"ip\";s:10:\"172.18.0.1\";s:2:\"ua\";s:117:\"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36\";s:5:\"login\";i:1733383265;}s:64:\"888bf620ea9d40a63c8eb1b282fee423ccc838c4b8310fbfcd13e96085ddf4ef\";a:4:{s:10:\"expiration\";i:1733558497;s:2:\"ip\";s:10:\"172.18.0.1\";s:2:\"ua\";s:117:\"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36\";s:5:\"login\";i:1733385697;}s:64:\"ca9e4bea99ed3dc132b61c29049ae1a54532c19ab07add84fb4ca59668e56a5f\";a:4:{s:10:\"expiration\";i:1733559726;s:2:\"ip\";s:10:\"172.18.0.1\";s:2:\"ua\";s:117:\"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36\";s:5:\"login\";i:1733386926;}s:64:\"0d3c01160f99c0060cd239fee0801c91b42c64d9b0d317f0ee25ddf035482fa3\";a:4:{s:10:\"expiration\";i:1733560651;s:2:\"ip\";s:10:\"172.18.0.1\";s:2:\"ua\";s:117:\"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36\";s:5:\"login\";i:1733387851;}s:64:\"5381f67e5a2a9552955d01ffd55d6471ad1a034d56caffe8ae259e2f9fddb7fd\";a:4:{s:10:\"expiration\";i:1733561572;s:2:\"ip\";s:10:\"172.18.0.1\";s:2:\"ua\";s:117:\"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36\";s:5:\"login\";i:1733388772;}}'),
+(16,1,'session_tokens','a:1:{s:64:\"68d2a23a88f3c6cb6ced90317cfca6197a59779a25b17c7b1e3e0b7aa61a546f\";a:4:{s:10:\"expiration\";i:1733885638;s:2:\"ip\";s:10:\"172.18.0.1\";s:2:\"ua\";s:117:\"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36\";s:5:\"login\";i:1733712838;}}'),
 (17,1,'wp_dashboard_quick_press_last_post_id','4'),
 (18,1,'community-events-location','a:1:{s:2:\"ip\";s:10:\"172.18.0.0\";}'),
 (19,1,'wp_user-settings','mfold=o&libraryContent=browse'),
@@ -1141,4 +1141,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2024-12-09  2:53:11
+-- Dump completed on 2024-12-09  3:05:16
