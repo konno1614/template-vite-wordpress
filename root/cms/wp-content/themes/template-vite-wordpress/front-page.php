@@ -5,6 +5,13 @@
 <div class="p-index">
     <div class="l-inner">
         <section class="p-index__section">
+            <picture>
+                <source srcset="<?php echo get_template_directory_uri(); ?>/assets/images/post/dummy.avif" width="900" height="600" alt="dummy" loading="lazy" decoding="async" type="image/avif" />
+                <source srcset="<?php echo get_template_directory_uri(); ?>/assets/images/post/dummy.webp" width="900" height="600" alt="dummy" loading="lazy" decoding="async" type="image/webp" />
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/post/dummy.jpg" width="900" height="600" alt="dummy" loading="lazy" decoding="async" />
+            </picture>
+        </section>
+        <section class="p-index__section">
             <h2 class="c-title">Search</h2>
             <?php
             get_search_form()
