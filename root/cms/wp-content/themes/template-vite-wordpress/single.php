@@ -14,7 +14,11 @@
                             <?php if (has_post_thumbnail()): ?>
                                 <?php the_post_thumbnail('full'); ?>
                             <?php else : ?>
-                                <img src="<?php echo $root; ?>assets/images/post/dummy.jpg" width="900" height="600" alt="dummy" loading="lazy" decoding="async" />
+                                <picture>
+                                    <source srcset="<?php echo $root; ?>/assets/images/post/dummy.avif" width="900" height="600" alt="dummy" fetchpriority="high" type="image/avif" />
+                                    <source srcset="<?php echo $root; ?>/assets/images/post/dummy.webp" width="900" height="600" alt="dummy" fetchpriority="high" type="image/webp" />
+                                    <img src="<?php echo $root; ?>/assets/images/post/dummy.jpg" width="900" height="600" alt="dummy" loading="lazy" decoding="async" />
+                                </picture>
                             <?php endif; ?>
                         </div>
                         <time class="time">

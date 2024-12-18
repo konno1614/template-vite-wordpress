@@ -11,7 +11,11 @@
                             <?php if (has_post_thumbnail()): ?>
                                 <?php the_post_thumbnail('full'); ?>
                             <?php else : ?>
-                                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/post/dummy.avif" width="900" height="600" alt="dummy" loading="lazy" decoding="async" />
+                                <picture>
+                                    <source srcset="<?php echo get_template_directory_uri(); ?>/assets/images/post/dummy02.avif" width="900" height="600" alt="dummy" fetchpriority="high" type="image/avif" />
+                                    <source srcset="<?php echo get_template_directory_uri(); ?>/assets/images/post/dummy02.webp" width="900" height="600" alt="dummy" fetchpriority="high" type="image/webp" />
+                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/post/dummy02.jpg" width="900" height="600" alt="dummy" loading="lazy" decoding="async" />
+                                </picture>
                             <?php endif; ?>
                         </div>
                         <time class="time">
