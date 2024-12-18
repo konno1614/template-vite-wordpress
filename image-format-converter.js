@@ -7,8 +7,7 @@ import sharp from 'sharp'
 class ImageFormatConverter {
     #defaults = {
         srcDir: 'src/assets/images',
-        // distDir: 'dist', // for static
-        distDir: 'root/cms/wp-content/themes/template-vite-wordpress', // for wordpress
+        distDir: 'root/cms/wp-content/themes/template-vite-wordpress',
         src: ['/**/*.{jpg,jpeg,png}'],
         includeExtensionName: false, // 拡張子を生成後に含めない
         formats: [

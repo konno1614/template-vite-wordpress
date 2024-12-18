@@ -28,11 +28,18 @@ dist-ssr
 _
 
 # wp-content
-root/cms/wp-content/plugins/*
+/root/cms/wp-content/plugins/*
 !root/cms/wp-content/plugins/advanced-custom-fields-pro
 
 # root/cms/wp-content/uploads/*
 # !root/cms/wp-content/uploads/backup.sql
+
+/root/cms/wp-content/themes/template-vite-wordpress/assets/**
+/root/cms/wp-content/themes/template-vite-wordpress/css
+/root/cms/wp-content/themes/template-vite-wordpress/js
+/root/cms/wp-content/themes/template-vite-wordpress/img
+/root/cms/wp-content/themes/template-vite-wordpress/font
+/root/cms/wp-content/themes/template-vite-wordpress/json
 
 # src
 /src/assets/images/**/*.webp
