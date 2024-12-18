@@ -33,3 +33,7 @@ root/cms/wp-content/plugins/*
 
 # root/cms/wp-content/uploads/*
 # !root/cms/wp-content/uploads/backup.sql
+
+# src
+/src/assets/images/**/*.webp
+/src/assets/images/**/*.avif

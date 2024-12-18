@@ -1,3 +1,4 @@
+<?php require 'header.php'; ?>
 <?php get_header(); ?>
 
 <p style="text-align: center; color: red;">archive.php</p>

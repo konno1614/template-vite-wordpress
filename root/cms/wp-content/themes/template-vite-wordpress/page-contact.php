@@ -1,3 +1,4 @@
+<?php require 'header.php'; ?>
 <?php get_header(); ?>
 
 <div class="p-contact">
