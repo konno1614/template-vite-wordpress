@@ -1,3 +1,4 @@
+<?php require 'header.php'; ?>
 <?php get_header(); ?>
 
 <p style="text-align: center; color: red;">single-custom-post-sample.php</p>
@@ -16,7 +17,7 @@
                             <?php if (has_post_thumbnail()): ?>
                                 <?php the_post_thumbnail('full'); ?>
                             <?php else : ?>
-                                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/post/dummy.jpg" width="900" height="600" alt="dummy" loading="lazy" decoding="async" />
+                                <img src="<?php echo $root; ?>assets/images/post/dummy.jpg" width="900" height="600" alt="dummy" loading="lazy" decoding="async" />
                             <?php endif; ?>
                         </div>
                         <time class="time">
@@ -96,7 +97,7 @@
                                     <?php if (has_post_thumbnail()): ?>
                                         <?php the_post_thumbnail('full'); ?>
                                     <?php else : ?>
-                                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/post/dummy.jpg" width="900" height="600" alt="dummy" loading="lazy" decoding="async" />
+                                        <img src="<?php echo $root; ?>assets/images/post/dummy.jpg" width="900" height="600" alt="dummy" loading="lazy" decoding="async" />
                                     <?php endif; ?>
                                 </div>
                                 <time class="time">

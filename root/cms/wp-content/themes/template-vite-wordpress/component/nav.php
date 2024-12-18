@@ -1,7 +1,7 @@
 <nav class="c-nav js-nav">
     <div class="c-nav__logo">
         <a href="<?php echo esc_url(home_url('/')); ?>">
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/logo.png" width="511" height="164" alt="Logo" />
+            <img src="<?php echo $root; ?>assets/images/common/logo.png" width="511" height="164" alt="Logo" />
         </a>
     </div>
     <ul class="c-nav__list">

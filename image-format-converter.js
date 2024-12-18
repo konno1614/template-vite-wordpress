@@ -7,12 +7,13 @@ import sharp from 'sharp'
 class ImageFormatConverter {
     #defaults = {
         srcDir: 'src/assets/images',
-        distDir: 'root/cms/wp-content/themes/template-vite-wordpress',
+        // distDir: 'dist', // for static
+        distDir: 'root/cms/wp-content/themes/template-vite-wordpress', // for wordpress
         src: ['/**/*.{jpg,jpeg,png}'],
         includeExtensionName: false, // 拡張子を生成後に含めない
         formats: [
             { type: 'webp', quality: 80 }, // webp形式で圧縮
-            // { type: 'avif', quality: 50 } // avif形式で圧縮
+            { type: 'avif', quality: 50 } // avif形式で圧縮
         ]
     }
 

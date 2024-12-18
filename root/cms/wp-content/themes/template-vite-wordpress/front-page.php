@@ -1,9 +1,17 @@
+<?php require 'header.php'; ?>
 <?php get_header(); ?>
 
 <p style="text-align: center; color: red;">front-page.php</p>
 
 <div class="p-index">
     <div class="l-inner">
+        <section class="p-index__section">
+            <picture>
+                <source srcset="<?php echo $root; ?>/assets/images/post/dummy.avif" width="900" height="600" alt="dummy" loading="lazy" decoding="async" type="image/avif" />
+                <source srcset="<?php echo $root; ?>/assets/images/post/dummy.webp" width="900" height="600" alt="dummy" loading="lazy" decoding="async" type="image/webp" />
+                <img src="<?php echo $root; ?>/assets/images/post/dummy.jpg" width="900" height="600" alt="dummy" loading="lazy" decoding="async" />
+            </picture>
+        </section>
         <section class="p-index__section">
             <h2 class="c-title">Search</h2>
             <?php
@@ -42,7 +50,7 @@
                                     <?php if (has_post_thumbnail()): ?>
                                         <?php the_post_thumbnail('full'); ?>
                                     <?php else : ?>
-                                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/post/dummy.jpg" width="900" height="600" alt="dummy" loading="lazy" decoding="async" />
+                                        <img src="<?php echo $root; ?>assets/images/post/dummy.jpg" width="900" height="600" alt="dummy" loading="lazy" decoding="async" />
                                     <?php endif; ?>
                                 </div>
                                 <time class="time">
@@ -84,7 +92,7 @@
                                     <?php if (has_post_thumbnail()): ?>
                                         <?php the_post_thumbnail('full'); ?>
                                     <?php else : ?>
-                                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/post/dummy.jpg" width="900" height="600" alt="dummy" loading="lazy" decoding="async" />
+                                        <img src="<?php echo $root; ?>/assets/images/post/dummy.jpg" width="900" height="600" alt="dummy" loading="lazy" decoding="async" />
                                     <?php endif; ?>
                                 </div>
                                 <time class="time">

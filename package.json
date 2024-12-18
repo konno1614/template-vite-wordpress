@@ -9,10 +9,10 @@
         "@wordpress/env": "10.13.0"
     },
     "scripts": {
-        "start": "npm-run-all wp-start wp-import docker-start dev",
-        "build": "npm-run-all delete-public delete-assets build-wp image-format-converter remove-empty-dirs docker-stop wp-export wp-stop",
-        "dev": "vite --host",
-        "build-static": "rm -rf dist && vite build",
+        "start": "npm-run-all wp-start wp-import docker-start image-format-converter-src dev",
+        "build": "npm-run-all delete-public delete-assets remove-src-images build-wp image-format-converter remove-empty-dirs docker-stop wp-export wp-stop",
+        "dev": "node remove-src-images.js && node image-format-converter-src.js && vite --host",
+        "build-static": "rm -rf dist && vite build && prettier --write \"dist/**/*.html\" && node ./image-format-converter.js && node remove-src-images.js",
         "build-wp": "vite build --mode wp",
         "wp-start": "wp-env start",
         "wp-stop": "wp-env stop",
@@ -26,13 +26,14 @@
         "docker-start": "docker-compose up -d",
         "docker-stop": "docker-compose down",
         "check-hash-value": "node_modules/.bin/wp-env install-path",
-        "image-format-converter": "node ./image-format-converter.js",
+        "image-format-converter": "node image-format-converter.js",
+        "image-format-converter-src": "node image-format-converter-src.js",
         "remove-empty-dirs": "node remove-empty-dirs.js",
+        "remove-src-images": "node remove-src-images.js",
         "preview-static": "vite preview",
-        "delete-assets": "rimraf root/cms/wp-content/themes/template-vite-wordpress/assets",
-        "delete-public": "rimraf root/cms/wp-content/themes/template-vite-wordpress/css root/cms/wp-content/themes/template-vite-wordpress/js root/cms/wp-content/themes/template-vite-wordpress/font root/cms/wp-content/themes/template-vite-wordpress/img root/cms/wp-content/themes/template-vite-wordpress/json",
-        "format:html": "prettier --write \"dist/**/*.html\"",
-        "format:php": "prettier --write \"root/cms/wp-content/themes/template-vite-wordpress/**/*.php\""
+        "delete-assets": "rimraf root/cms/wp-content/themes/hokusingas_recruit/assets",
+        "delete-public": "rimraf root/cms/wp-content/themes/hokusingas_recruit/css root/cms/wp-content/themes/hokusingas_recruit/js root/cms/wp-content/themes/hokusingas_recruit/font root/cms/wp-content/themes/hokusingas_recruit/img root/cms/wp-content/themes/hokusingas_recruit/json",
+        "format:html": "prettier --write \"dist/**/*.html\""
     },
     "devDependencies": {
         "ansi-colors": "^4.1.3",

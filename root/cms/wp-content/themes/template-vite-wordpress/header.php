@@ -23,21 +23,21 @@
     <meta name="format-detection" content="telephone=no" />
     <link rel="canonical" href="<?php echo home_url(); ?>">
     <!-- icon -->
-    <link rel="icon" href="<?php echo get_template_directory_uri(); ?>/assets/images/common/favicon.ico" sizes="32x32" type="image/vnd.microsoft.icon">
-    <link rel="icon" href="<?php echo get_template_directory_uri(); ?>/assets/images/common/favicon.svg" type="image/svg+xml">
-    <link rel="apple-touch-icon" href="<?php echo get_template_directory_uri(); ?>/assets/images/common/apple-touch-icon.png">
-    <link rel="manifest" href="<?php echo get_template_directory_uri(); ?>/json/manifest.webmanifest" crossorigin="use-credentials">
+    <link rel="icon" href="<?php echo $root; ?>/assets/images/common/favicon.ico" sizes="32x32" type="image/vnd.microsoft.icon">
+    <link rel="icon" href="<?php echo $root; ?>/assets/images/common/favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="<?php echo $root; ?>/assets/images/common/apple-touch-icon.png">
+    <link rel="manifest" href="<?php echo $root; ?>/json/manifest.webmanifest" crossorigin="use-credentials">
     <!-- ogp -->
     <meta property="og:site_name" content="<?php bloginfo('name'); ?>" />
     <meta property="og:url" content="<?php echo home_url(); ?>" />
     <meta property="og:type" content="website" />
     <meta property="og:title" content="<?php echo wp_get_document_title(); ?>" />
     <meta property="og:description" content="<?php bloginfo('description'); ?>" />
-    <meta property="og:image" content="<?php echo get_template_directory_uri(); ?>/assets/images/common/ogp.wepb" />
+    <meta property="og:image" content="<?php echo $root; ?>/assets/images/common/ogp.wepb" />
     <meta property="og:locale" content="ja_JP" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:description" content="<?php bloginfo('description'); ?>" />
-    <meta name="twitter:image:src" content="<?php echo get_template_directory_uri(); ?>/assets/images/common/ogp.wepb" />
+    <meta name="twitter:image:src" content="<?php echo $root; ?>/assets/images/common/ogp.wepb" />
     <!-- font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -53,7 +53,7 @@
         <div class="l-inner">
             <h1>
                 <a href="<?php echo esc_url(home_url('/')); ?>">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/logo.png" width="511" height="164" alt="Logo" />
+                    <img src="<?php echo $root; ?>/assets/images/common/logo.png" width="511" height="164" alt="Logo" />
                 </a>
             </h1>
         </div>
