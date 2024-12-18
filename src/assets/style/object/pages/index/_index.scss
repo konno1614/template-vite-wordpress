@@ -8,4 +8,20 @@
             margin-top: 100px;
         }
     }
+    &__bg {
+        width: 512px;
+        height: 512px;
+        background-image: image-set(
+            url("../../assets/images/test/background.avif") type("image/avif"),
+            url("../../assets/images/test/background.webp") type("image/webp"),
+            url("../../assets/images/test/background.png") type("image/png")
+        );
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: contain;
+        @include f.breakpoint(sp) {
+            width: 200px;
+            height: 200px;
+        }
+    }
 }

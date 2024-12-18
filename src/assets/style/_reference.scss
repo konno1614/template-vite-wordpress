@@ -11,7 +11,12 @@
         }
     }
     &__bg {
-        background-image: url(/assets/images/background.png);
+        // background-image: url("/assets/images/background.png");
+        background-image: image-set(
+            url("../../assets/images/background.avif") type("image/avif"),
+            url("../../assets/images/background.webp") type("image/webp"),
+            url("../../assets/images/background.png") type("image/png")
+        );
         background-repeat: no-repeat;
         background-position: center center;
         background-size: contain;

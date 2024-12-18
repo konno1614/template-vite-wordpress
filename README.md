@@ -1,5 +1,5 @@
 # Template-Vite-WoredPress
-利用OSはMacを想定しています。
+WordPressのテンプレートテーマです。
 
 ## フロント開発
 ![VS Code](https://img.shields.io/badge/Visual%20Studio%20Code-007ACC?style=flat&logo=visualstudiocode&logoColor=ffffff)

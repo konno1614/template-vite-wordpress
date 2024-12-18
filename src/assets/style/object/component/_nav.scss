@@ -23,14 +23,6 @@
         visibility: visible;
         left: 0;
     }
-    &__logo {
-        img {
-            max-width: 200px;
-            @include f.breakpoint(sp) {
-                max-width: 100px;
-            }
-        }
-    }
     &__list {
         margin-top: 1em;
         li {

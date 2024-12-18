@@ -7,10 +7,13 @@
     <div class="l-inner">
         <section class="p-index__section">
             <picture>
-                <source srcset="<?php echo $root; ?>/assets/images/post/dummy.avif" width="900" height="600" alt="dummy" loading="lazy" decoding="async" type="image/avif" />
-                <source srcset="<?php echo $root; ?>/assets/images/post/dummy.webp" width="900" height="600" alt="dummy" loading="lazy" decoding="async" type="image/webp" />
-                <img src="<?php echo $root; ?>/assets/images/post/dummy.jpg" width="900" height="600" alt="dummy" loading="lazy" decoding="async" />
+                <source srcset="<?php echo $root; ?>/assets/images/test/large-image.avif" width="4963" height="3309" alt="large-image" loading="lazy" decoding="async" type="image/avif" />
+                <source srcset="<?php echo $root; ?>/assets/images/test/large-image.webp" width="4963" height="3309" alt="large-image" loading="lazy" decoding="async" type="image/webp" />
+                <img src="<?php echo $root; ?>/assets/images/test/large-image.jpg" width="4963" height="3309" alt="large-image" loading="lazy" decoding="async" />
             </picture>
+        </section>
+        <section class="p-index__section">
+            <div class="p-index__bg"></div>
         </section>
         <section class="p-index__section">
             <h2 class="c-title">Search</h2>
@@ -22,13 +25,13 @@
             <h2 class="c-title">Pages</h2>
             <ul>
                 <li>
-                    <a href="<?php echo esc_url(home_url('/')); ?>">Home</a>
+                    <a href="<?php echo esc_url(home_url('/')); ?>">・Home</a>
                 </li>
                 <li>
-                    <a href="<?php echo esc_url(home_url('/')); ?>sample/">Sample</a>
+                    <a href="<?php echo esc_url(home_url('/')); ?>sample/">・Sample</a>
                 </li>
                 <li>
-                    <a href="<?php echo esc_url(home_url('/')); ?>contact/">Contact</a>
+                    <a href="<?php echo esc_url(home_url('/')); ?>contact/">・Contact</a>
                 </li>
             </ul>
         </section>
@@ -50,7 +53,7 @@
                                     <?php if (has_post_thumbnail()): ?>
                                         <?php the_post_thumbnail('full'); ?>
                                     <?php else : ?>
-                                        <img src="<?php echo $root; ?>assets/images/post/dummy.jpg" width="900" height="600" alt="dummy" loading="lazy" decoding="async" />
+                                        <img src="<?php echo $root; ?>/assets/images/post/dummy.avif" width="900" height="600" alt="dummy" loading="lazy" decoding="async" />
                                     <?php endif; ?>
                                 </div>
                                 <time class="time">
@@ -92,7 +95,7 @@
                                     <?php if (has_post_thumbnail()): ?>
                                         <?php the_post_thumbnail('full'); ?>
                                     <?php else : ?>
-                                        <img src="<?php echo $root; ?>/assets/images/post/dummy.jpg" width="900" height="600" alt="dummy" loading="lazy" decoding="async" />
+                                        <img src="<?php echo $root; ?>/assets/images/post/dummy.avif" width="900" height="600" alt="dummy" loading="lazy" decoding="async" />
                                     <?php endif; ?>
                                 </div>
                                 <time class="time">

@@ -83,7 +83,8 @@ export default defineConfig(({ mode }) => {
             outDir: mode === "wp"
                 ? resolve(__dirname, "root/cms/wp-content/themes/template-vite-wordpress/")
                 : resolve(__dirname, "dist"),
-            rollupOptions: getRollupOptions(mode)
+            rollupOptions: getRollupOptions(mode),
+            assetsInlineLimit: 1000 * 1024,  // 1MB(1000KB)以下のファイルを変換
         },
         plugins: [
         ],
