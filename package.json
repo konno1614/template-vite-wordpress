@@ -31,8 +31,8 @@
         "remove-empty-dirs": "node remove-empty-dirs.js",
         "remove-src-images": "node remove-src-images.js",
         "preview-static": "vite preview",
-        "delete-assets": "rimraf root/cms/wp-content/themes/hokusingas_recruit/assets",
-        "delete-public": "rimraf root/cms/wp-content/themes/hokusingas_recruit/css root/cms/wp-content/themes/hokusingas_recruit/js root/cms/wp-content/themes/hokusingas_recruit/font root/cms/wp-content/themes/hokusingas_recruit/img root/cms/wp-content/themes/hokusingas_recruit/json",
+        "delete-assets": "rimraf root/cms/wp-content/themes/template-vite-wordpress/assets",
+        "delete-public": "rimraf root/cms/wp-content/themes/template-vite-wordpress/css root/cms/wp-content/themes/template-vite-wordpress/js root/cms/wp-content/themes/template-vite-wordpress/font root/cms/wp-content/themes/template-vite-wordpress/img root/cms/wp-content/themes/template-vite-wordpress/json",
         "format:html": "prettier --write \"dist/**/*.html\""
     },
     "devDependencies": {
